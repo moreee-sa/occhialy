@@ -30,7 +30,7 @@ Per eseguire il progetto localmente:
 2. Entra nella cartella del progetto:
 
    ```bash
-   cd <NOME_CARTELLA_PROGETTO>
+   cd occhialy
    ```
 
 3. Installa le dipendenze:
