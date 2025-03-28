@@ -49,7 +49,7 @@ Per eseguire il progetto localmente:
 
    ```bash
    npm run build
-   
+   ```
 
 ## 📌 Credis
 - I video di sfondo sono stati presi da [Pexels](https://www.pexels.com/).
