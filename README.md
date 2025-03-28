@@ -53,4 +53,4 @@ Per eseguire il progetto localmente:
 
 ## 📌 Credis
 - I video di sfondo sono stati presi da [Pexels](https://www.pexels.com/).
-- Le immagini sono state generate tramite intelligenza artificiale (es. DALL·E, Midjourney, Stable Diffusion).
+- Le immagini sono state generate tramite intelligenza artificiale (es. Leonardo AI, Microsoft Designer).
