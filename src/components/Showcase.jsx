@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import CardsCollection from "./CardsCollection";
 
-const CollectionWrapper = styled.div`
+const ShowcaseWrapper = styled.div`
   background-color: #ededed;
   padding: 0 80px 120px 80px;
   @media (max-width: 999px) {
@@ -21,7 +21,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const TextCollectionWrapper = styled.div`
+const TextShowcaseWrapper = styled.div`
   width: 30vw;
   margin-bottom: 40px;
 
@@ -55,17 +55,17 @@ const TextInfoCollection = styled.span`
 function Collection() {
   return (
     <>
-      <CollectionWrapper>
+      <ShowcaseWrapper>
         <TextWrapper>
-          <TextCollectionWrapper>
+          <TextShowcaseWrapper>
             <TextCollection>La collezione 2025</TextCollection>
-          </TextCollectionWrapper>
-          <TextCollectionWrapper>
+          </TextShowcaseWrapper>
+          <TextShowcaseWrapper>
             <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
-          </TextCollectionWrapper>
+          </TextShowcaseWrapper>
         </TextWrapper>
         <CardsCollection/>
-      </CollectionWrapper>
+      </ShowcaseWrapper>
     </>
   )
 }

@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
-import Collection from './components/Collection';
+import Collection from './components/Showcase';
 import NewsletterSubscription from './components/NewsletterSubscription';
 import Footer from './components/Footer';
 import VideoBackground from "./components/VideoBackground";
