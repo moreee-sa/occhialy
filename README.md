@@ -1,54 +1,56 @@
 # Occhialy
 
-**Occhialy** è un progetto costruito con React, che offre un design elegante e semplice. Realizzato interamente in React, il sito è pensato per offrire un'esperienza utente dinamica e responsive.
+### [📜Italiano](README_IT.md)
 
-Questo progetto è stato creato come esercizio di sviluppo web e sarà utilizzato come portfolio per presentare le mie competenze nella creazione di siti dinamici con React. L'obiettivo è replicare l'aspetto di un sito esistente, mantenendo una struttura responsive e un'interfaccia utente moderna.
+**Occhialy** is a project built with React, offering an elegant and simple design. Fully developed in React, the website is designed to provide a dynamic and responsive user experience.
 
-## Caratteristiche
-- Sito sviluppato con React.
-- Utilizzo di componenti React per una gestione dinamica della UI.
-- Mobile-friendly, per un'esperienza utente ottimale su dispositivi mobili.
-- Utilizzo di **Styled Components** per lo styling dei componenti React
-- Navigazione tra pagine gestita con **React Router**
+This project was created as a web development exercise and will be used as a portfolio to showcase my skills in building dynamic websites with React. The goal is to replicate the look of an existing website while maintaining a responsive structure and a modern user interface.
+
+## Features
+- Website developed with React.
+- Use of React components for dynamic UI management.
+- Mobile-friendly, providing an optimal user experience on mobile devices.
+- Use of **Styled Components** for styling React components.
+- Page navigation managed with **React Router**.
 
 ## 📸 Screenshot
 ### Desktop / Mobile
 ![Occhialy Screenshot Overview](screenshot/site_overview.png)
 
-## Installazione
+## Installation
 
-Per eseguire il progetto localmente:
+To run the project locally:
 
-1. Clona il repository:
+1. Clone the repository:
 
    ```bash
-   git clone <URL_DEL_REPOSITORY>
+   git clone <REPOSITORY_URL>
    ```
 
-2. Entra nella cartella del progetto:
+2. Navigate into the project folder:
 
    ```bash
    cd occhialy
    ```
 
-3. Installa le dipendenze:
+3. Install the dependencies:
 
    ```bash
    npm install
    ```
 
-4. Avvia il server di sviluppo:
+4. Start the development server:
 
    ```bash
    npm run dev
    ```
 
-   Oppure, per una build di produzione:
+   Or, for a production build:
 
    ```bash
    npm run build
    ```
 
-## 📌 Credis
-- I video di sfondo sono stati presi da [Pexels](https://www.pexels.com/).
-- Le immagini sono state generate tramite intelligenza artificiale (es. Leonardo AI, Microsoft Designer).
+## 📌 Credits
+- The background videos were sourced from [Pexels](https://www.pexels.com/).
+- The images were generated through artificial intelligence (e.g., Leonardo AI, Microsoft Designer).
