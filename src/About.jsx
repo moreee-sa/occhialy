@@ -137,7 +137,7 @@ function About() {
             </BrandDescriptionParagraph>
           </BrandDescription>
           <BrandImageContainer>
-            <BrandImage src="/image/case/case1.png" />
+            <BrandImage src="./image/case/case1.png" />
           </BrandImageContainer>
         </AboutBrandWrapper>
       </AboutWrapper>

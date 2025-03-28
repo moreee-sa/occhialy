@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
+import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.div`
   height: 75px;
@@ -146,7 +147,7 @@ const SidebarBackground = styled.div`
 const links = [
   { id: 0, name: "Home", path: "/" },
   { id: 1, name: "Collezione", path: "/collection" },
-  { id: 2, name: "About", path: "/about" },
+  { id: 2, name: "About", path: "./about" },
   { id: 3, name: "Contatti", path: "/contact" },
 ];
 
@@ -167,10 +168,10 @@ function Navbar({ fade }) {
           {links
             .filter((link) => link.id !== 3) // Esclude il link con id 3
             .map((link) => (
-              <a key={link.id} href={link.path} style={{ textDecoration: "none" }}>
+              <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
                 <StyledText>{link.name}</StyledText>
-              </a>
-          ))}
+              </Link>
+            ))}
         </LinksWrapper>
         
         <LogoWrapper>Occhialy</LogoWrapper>
