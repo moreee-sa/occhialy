@@ -23,7 +23,7 @@ const LogoWrapper = styled.div`
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   font-size: 22px;
-  color: white;
+  color: ${(props) => (props.$inverted ? "black" : "white")};
 `;
 
 const LinksWrapper = styled.div`
@@ -55,7 +55,7 @@ const StyledText = styled.span`
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  color: white;
+  color: ${(props) => (props.$inverted ? "black" : "white")};
   transition: color 0.2s ease;
 
   &:hover {
@@ -144,37 +144,36 @@ const SidebarBackground = styled.div`
   /* background-color: red; */
 `;
 
-const links = [
-  { id: 0, name: "Home", path: "/" },
-  { id: 1, name: "Collezione", path: "/collection" },
-  { id: 2, name: "About", path: "./about" },
-  { id: 3, name: "Contatti", path: "/contact" },
-];
-
-function Navbar({ fade }) {
+function Navbar({ fade, inverted }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isFading, setIsFading] = useState(fade);
+  const [isInverted, setIsInverted] = useState(inverted);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  const links = [
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "About", path: "/about" },
+    { id: 3, name: "Collection", path: "/collection" },
+  ];
+
   return (
     <>
-      <NavbarWrapper $isVisible={isVisible}  $fade={isFading}>
+      <NavbarWrapper $isVisible={isVisible} $fade={isFading}>
         {/* Desktop Links */}
         <LinksWrapper>
           {links
-            .filter((link) => link.id !== 3) // Esclude il link con id 3
             .map((link) => (
               <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
-                <StyledText>{link.name}</StyledText>
+                <StyledText $inverted={isInverted}>{link.name}</StyledText>
               </Link>
             ))}
         </LinksWrapper>
         
-        <LogoWrapper>Occhialy</LogoWrapper>
+        <LogoWrapper $inverted={isInverted}>Occhialy</LogoWrapper>
 
         <OtherLinkWrapper>
           <ContactButton>Contatti</ContactButton>
@@ -192,9 +191,9 @@ function Navbar({ fade }) {
           <FiX style={{ color: "black" }} />
         </CloseButton>
         {links.map((link) => (
-          <SidebarLink key={link.id} href={link.path}>
-            {link.name}
-          </SidebarLink>
+          <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
+            <SidebarLink>{link.name}</SidebarLink>
+          </Link>
         ))}
       </Sidebar>
 
