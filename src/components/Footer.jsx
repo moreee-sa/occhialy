@@ -84,7 +84,7 @@ function Footer() {
           ))}
         </SocialWrapper>
         <Rights>
-          © 2025 Diverse41 – Questo sito è stato creato con passione 💙
+          © 2025 moreee-sa – Questo sito è stato creato con passione 💙
         </Rights>
       </FooterWrapper>
     </>
