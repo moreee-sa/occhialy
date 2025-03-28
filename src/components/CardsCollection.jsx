@@ -120,7 +120,7 @@ const occhiali = [
     info: "Un design audace che evoca eleganza e forza.",
     hiddenInfo: "Testo Nascosto",
     path: "/1",
-    imageUrl: "/image/glasses/glasses4.png"
+    imageUrl: "./image/glasses/glasses4.png"
   },
   {
     id: 1,
@@ -128,7 +128,7 @@ const occhiali = [
     info: "L'unione perfetta di stile raffinato e modernità.",
     hiddenInfo: "Testo Nascosto",
     path: "/2",
-    imageUrl: "/image/glasses/glasses2.png"
+    imageUrl: "./image/glasses/glasses2.png"
   },
   {
     id: 2,
@@ -136,7 +136,7 @@ const occhiali = [
     info: "Una fusione di tecnologia avanzata e design futuristico.",
     hiddenInfo: "Testo Nascosto",
     path: "/3",
-    imageUrl: "/image/glasses/glasses1.png"
+    imageUrl: "./image/glasses/glasses1.png"
   },
   {
     id: 3,
@@ -144,7 +144,7 @@ const occhiali = [
     info: "Semplicità sofisticata con una visione chiara e pura.",
     hiddenInfo: "Testo Nascosto",
     path: "/4",
-    imageUrl: "/image/glasses/glasses3.png"
+    imageUrl: "./image/glasses/glasses3.png"
   },
 ];
 
