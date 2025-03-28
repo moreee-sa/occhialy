@@ -12,10 +12,8 @@ Questo progetto è stato creato come esercizio di sviluppo web e sarà utilizzat
 - Navigazione tra pagine gestita con **React Router**
 
 ## 📸 Screenshot
-### Desktop
-![Occhialy Screenshot Desktop](screenshot/desktop.png)
-### Mobile
-![Occhialy Screenshot Mobile](screenshot/mobile.png)
+### Desktop / Mobile
+![Occhialy Screenshot Overview](screenshot/site_overview.png)
 
 ## Installazione
 
