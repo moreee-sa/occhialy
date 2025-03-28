@@ -17,8 +17,8 @@ function VideoBackground({ height }) {
 
   function getVideoSource() {
     return window.innerWidth > 999
-      ? "/assets/background_desktop.mp4"
-      : "/assets/background_mobile2.mp4";
+      ? "./assets/background_desktop.mp4"
+      : "./assets/background_mobile2.mp4";
   }
 
   useEffect(() => {
