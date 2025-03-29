@@ -184,7 +184,7 @@ function Navbar({ fade, inverted }) {
 
         {/* Hamburger Button (Solo Mobile) */}
         <HamburgerButton onClick={() => setSidebarOpen(true)}>
-          <FiMenu />
+          <FiMenu color={isInverted ? "black" : "white"} />
         </HamburgerButton>
       </NavbarWrapper>
 
