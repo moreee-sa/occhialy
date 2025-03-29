@@ -105,6 +105,7 @@ const Sidebar = styled.div`
   align-items: center;
   padding-top: 80px;
   transition: right 0.3s ease-in-out;
+  gap: 20px;
   z-index: 2;
 `;
 
@@ -117,7 +118,7 @@ const CloseButton = styled.div`
   cursor: pointer;
 `;
 
-const SidebarLink = styled.a`
+const SidebarLink = styled.span`
   color: #000000;
   font-size: 18px;
   margin: 20px 0;
@@ -155,9 +156,10 @@ function Navbar({ fade, inverted }) {
   }, []);
 
   const links = [
-    { id: 1, name: "Home", path: "/" },
-    { id: 2, name: "About", path: "/about" },
-    { id: 3, name: "Collection", path: "/collection" },
+    { id: 0, name: "Home", path: "/" },
+    { id: 1, name: "Collezione", path: "/collection" },
+    { id: 2, name: "About", path: "./about" },
+    { id: 3, name: "Contatti", path: "/contact" },
   ];
 
   return (
@@ -166,6 +168,7 @@ function Navbar({ fade, inverted }) {
         {/* Desktop Links */}
         <LinksWrapper>
           {links
+            .filter((link) => link.id !== 3) // Esclude il link con id 3
             .map((link) => (
               <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
                 <StyledText $inverted={isInverted}>{link.name}</StyledText>
