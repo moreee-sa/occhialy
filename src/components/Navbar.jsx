@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
+import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.div`
@@ -40,7 +41,7 @@ const OtherLinkWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   font-size: 22px;
@@ -80,6 +81,17 @@ const ContactButton = styled.button`
     background-color: white;
     color: rgb(29, 29, 31);
   }
+`;
+
+const GithubButton = styled.button`
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 `;
 
 const HamburgerButton = styled.div`
@@ -160,6 +172,7 @@ function Navbar({ fade, inverted }) {
     { id: 1, name: "Collezione", path: "/collection" },
     { id: 2, name: "About", path: "/about" },
     { id: 3, name: "Contatti", path: "/contact" },
+    { id: 4, name: "Github", path: "https://github.com/moreee-sa/occhialy.git"}
   ];
 
   return (
@@ -168,7 +181,7 @@ function Navbar({ fade, inverted }) {
         {/* Desktop Links */}
         <LinksWrapper>
           {links
-            .filter((link) => Number(link.id) !== 3)
+            .filter((link) => Number(link.id) !== 3 && Number(link.id) !== 4)
             .map((link) => (
               <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
                 <StyledText $inverted={isInverted}>{link.name}</StyledText>
@@ -189,6 +202,9 @@ function Navbar({ fade, inverted }) {
         </BrandNameLogo>
 
         <OtherLinkWrapper>
+          <GithubButton onClick={() => window.open("https://github.com/moreee-sa/occhialy.git", "_blank")}>
+            <FaGithub color="white" />
+          </GithubButton>
           <ContactButton>Contatti</ContactButton>
         </OtherLinkWrapper>
 
