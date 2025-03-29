@@ -202,7 +202,7 @@ function Navbar({ fade, inverted }) {
         </BrandNameLogo>
 
         <OtherLinkWrapper>
-          <GithubButton onClick={() => window.open("https://github.com/moreee-sa/occhialy.git", "_blank")}>
+          <GithubButton onClick={() => window.open(links[4].path, "_blank")}>
             <FaGithub color="white" />
           </GithubButton>
           <ContactButton>Contatti</ContactButton>
