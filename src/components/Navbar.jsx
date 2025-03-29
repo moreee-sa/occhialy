@@ -158,7 +158,7 @@ function Navbar({ fade, inverted }) {
   const links = [
     { id: 0, name: "Home", path: "/" },
     { id: 1, name: "Collezione", path: "/collection" },
-    { id: 2, name: "About", path: "./about" },
+    { id: 2, name: "About", path: "/about" },
     { id: 3, name: "Contatti", path: "/contact" },
   ];
 
@@ -168,7 +168,7 @@ function Navbar({ fade, inverted }) {
         {/* Desktop Links */}
         <LinksWrapper>
           {links
-            .filter((link) => link.id !== 3) // Esclude il link con id 3
+            .filter((link) => Number(link.id) !== 3)
             .map((link) => (
               <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
                 <StyledText $inverted={isInverted}>{link.name}</StyledText>
