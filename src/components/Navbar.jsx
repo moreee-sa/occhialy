@@ -19,7 +19,7 @@ const NavbarWrapper = styled.div`
   }
 `;
 
-const LogoWrapper = styled.div`
+const BrandNameLogo = styled.div`
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   font-size: 22px;
@@ -176,7 +176,17 @@ function Navbar({ fade, inverted }) {
             ))}
         </LinksWrapper>
         
-        <LogoWrapper $inverted={isInverted}>Occhialy</LogoWrapper>
+        <BrandNameLogo $inverted={isInverted}>
+          <Link
+            to={links[0].path}
+            style={{ 
+              textDecoration: "none", 
+              color: isInverted ? "black" : "white" 
+            }}
+          >
+            Occhialy
+          </Link>
+        </BrandNameLogo>
 
         <OtherLinkWrapper>
           <ContactButton>Contatti</ContactButton>
