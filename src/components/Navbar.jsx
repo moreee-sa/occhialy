@@ -172,7 +172,7 @@ function Navbar({ fade, inverted }) {
     { id: 1, name: "Collezione", path: "/collection" },
     { id: 2, name: "About", path: "/about" },
     { id: 3, name: "Contatti", path: "/contact" },
-    { id: 4, name: "Github", path: "https://github.com/moreee-sa/occhialy.git"}
+    { id: 4, name: "Github", path: "https://github.com/moreee-sa/occhialy.git" }
   ];
 
   return (
