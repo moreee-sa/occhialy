@@ -16,7 +16,7 @@ function VideoBackground({ height }) {
   const [videoSrc, setVideoSrc] = useState(getVideoSource());
 
   function getVideoSource() {
-    return window.innerWidth > 999
+    return window.innerWidth > 768
       ? "./assets/background_desktop.mp4"
       : "./assets/background_mobile2.mp4";
   }
