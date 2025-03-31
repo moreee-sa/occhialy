@@ -5,19 +5,23 @@ import "@fontsource/noto-sans/600.css";
 
 const GridContainer = styled.div`
   display: grid;
-  /* border: 1px solid blue; */
-  grid-template-columns: repeat(4, 1fr); /* 4 colonne di base */
   gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne quando lo schermo si restringe */
-    gap: 35px;
+  
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
   }
 
-  @media (max-width: 999px) {
-    grid-template-columns: repeat(1, 1fr); /* 1 colonna su schermi piccoli */
+  @media only screen and (min-width: 769px) and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 35px;
   }
 `;
 

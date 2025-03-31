@@ -15,7 +15,7 @@ const NavbarWrapper = styled.div`
   opacity: ${(props) => (props.$isVisible ? 1 : 0)};
   transition: ${(props) => (props.$fade ? "opacity 2s ease-in-out" : "none")};
 
-  @media (max-width: 999px) {
+  @media only screen and (max-width: 480px) {
     padding: 0 10px;
   }
 `;
@@ -32,7 +32,7 @@ const LinksWrapper = styled.div`
   gap: 30px;
   width: 100%;
 
-  @media (max-width: 999px) {
+  @media only screen and (max-width: 480px) {
     display: none; /* Nascondi i link nella navbar quando diventa sidebar */
   }
 `;
@@ -47,7 +47,7 @@ const OtherLinkWrapper = styled.div`
   font-size: 22px;
   width: 100%;
 
-  @media (max-width: 999px) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 `;
@@ -100,7 +100,7 @@ const HamburgerButton = styled.div`
   color: white;
   cursor: pointer;
 
-  @media (max-width: 999px) {
+  @media only screen and (max-width: 480px) {
     display: block; /* Mostra l'hamburger menu quando lo schermo è piccolo */
   }
 `;
