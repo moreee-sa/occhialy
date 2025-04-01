@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const NavbarWrapper = styled.div`
-  height: 75px;
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
