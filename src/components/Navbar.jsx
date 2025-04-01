@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
@@ -12,8 +12,10 @@ const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
-  transition: ${(props) => (props.$fade ? "opacity 2s ease-in-out" : "none")};
+  background: ${(props) => (props.$scrolled ? "black" : "transparent")}; 
+  transition: background 0.3s ease-in-out;
+  z-index: 5;
+  border-radius: 0 0 8px 8px;
 
   @media only screen and (max-width: 480px) {
     padding: 0 10px;
@@ -85,6 +87,7 @@ const ContactButton = styled.button`
 
 const GithubButton = styled.button`
   background-color: black;
+  color: white;
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -92,6 +95,11 @@ const GithubButton = styled.button`
   width: 40px;
   cursor: pointer;
   transition: all 0.2s ease;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 `;
 
 const HamburgerButton = styled.div`
@@ -162,6 +170,20 @@ function Navbar({ fade, inverted }) {
   const [isFading, setIsFading] = useState(fade);
   const [isInverted, setIsInverted] = useState(inverted);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    handleScroll(); // Controllo iniziale al primo render
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setIsVisible(true);
@@ -177,7 +199,7 @@ function Navbar({ fade, inverted }) {
 
   return (
     <>
-      <NavbarWrapper $isVisible={isVisible} $fade={isFading}>
+      <NavbarWrapper $isVisible={isVisible} $fade={isFading} $scrolled={scrolled}>
         {/* Desktop Links */}
         <LinksWrapper>
           {links
@@ -203,7 +225,7 @@ function Navbar({ fade, inverted }) {
 
         <OtherLinkWrapper>
           <GithubButton onClick={() => window.open(links[4].path, "_blank")}>
-            <FaGithub color="white" />
+            <FaGithub />
           </GithubButton>
           <ContactButton>Contatti</ContactButton>
         </OtherLinkWrapper>

@@ -11,7 +11,7 @@ import { LoremIpsum } from 'react-lorem-ipsum';
 
 const AppWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   /* background-color: #b18282; */
   box-sizing: border-box;
 `;
@@ -19,7 +19,16 @@ const AppWrapper = styled.div`
 const AppHome = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 0 80px;
+  @media (max-width: 999px) {
+    padding: 0 20px;
+  }
+`;
+
+const NavbarWrapper = styled.div`
+  position: sticky;
+  top: 0;
   padding: 0 80px;
   @media (max-width: 999px) {
     padding: 0 20px;
@@ -28,21 +37,21 @@ const AppHome = styled.div`
 
 function App() {
   return (
-    <>
-      <AppWrapper>
-        <AppHome>
-          <VideoBackground height={100} />
-          <Navbar fade={true} />
-          <Introduction />
-        </AppHome>
-        <div style={{ backgroundColor: "blue", height: "100px", display: "none" }}>
-          <LoremIpsum p={2} />
-        </div>
-        <Collection/>
-        <NewsletterSubscription/>
-        <Footer/>
-      </AppWrapper>
-    </>
+    <AppWrapper>
+      <NavbarWrapper>
+        <Navbar fade={true} />
+      </NavbarWrapper>
+      <AppHome>
+        <VideoBackground height={100} />
+        <Introduction />
+      </AppHome>
+      <div style={{ backgroundColor: "blue", height: "100px", display: "none" }}>
+        <LoremIpsum p={2} />
+      </div>
+      <Collection/>
+      <NewsletterSubscription/>
+      <Footer/>
+    </AppWrapper>
   )
 }
 
