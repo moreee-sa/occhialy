@@ -115,13 +115,24 @@ const BrandImage = styled.img`
   border-radius: 8px;
 `;
 
+const NavbarWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  padding: 0 80px;
+  @media (max-width: 999px) {
+    padding: 0 20px;
+  }
+`;
+
 function About() {
   return (
     <>
       <AboutWrapper>
+        <NavbarWrapper>
+          <Navbar fade={false} />
+        </NavbarWrapper>
         <AboutContent>
           <VideoBackground height={65} />
-          <Navbar fade={false} />
           <TextWrapper>
             <Tagline>Ideato per accompagnarti ogni giorno.</Tagline>
             <SubTagline>Progettato per resistere nel tempo.</SubTagline>
