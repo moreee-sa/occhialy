@@ -1,6 +1,17 @@
 import Navbar from "./components/Navbar"
 import styled from "styled-components"
 
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+  padding: 0 80px;
+  @media (max-width: 999px) {
+    padding: 0 20px;
+  }
+  /* background-color: #b18282; */
+`;
+
 const ConstructionMessage = styled.div`
   display: flex;
   justify-content: center;
@@ -20,12 +31,12 @@ const ConstructionMessage = styled.div`
 
 function Collection() {
   return (
-    <>
+    <Content>
       <Navbar fade={false} inverted={true} />
       <ConstructionMessage>
           Ancora in costruzione...
       </ConstructionMessage>
-    </>
+    </Content>
   )
 }
 
