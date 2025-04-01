@@ -27,6 +27,12 @@ const LogoWrapper = styled.div`
   color: white;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
   /* background-color: blue; */
 `;
 
