@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
 
 const TextWrapperHeight = styled.div`
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -83,10 +83,9 @@ function Introduction() {
     <>
       <TextWrapperHeight>
         <TextWrapper>
-
-            <TextLimited>
-              Edizione Numerata
-            </TextLimited>
+          <TextLimited>
+            Edizione Numerata
+          </TextLimited>
 
           <LeftTextWrapper>
             <TextContainer>
