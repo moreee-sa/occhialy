@@ -11,14 +11,13 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   background: ${(props) => (props.$scrolled ? "black" : "transparent")}; 
   transition: background 0.3s ease-in-out;
   z-index: 5;
-  border-radius: 0 0 8px 8px;
 
-  @media only screen and (max-width: 480px) {
-    padding: 0 10px;
+  padding: 0 80px;
+  @media (max-width: 999px) {
+    padding: 0 20px;
   }
 `;
 
@@ -165,6 +164,11 @@ const SidebarBackground = styled.div`
   /* background-color: red; */
 `;
 
+const NavbarSticky = styled.div`
+  position: sticky;
+  top: 0;
+`;
+
 function Navbar({ fade, inverted }) {
   const [isVisible, setIsVisible] = useState(false);
   const [isFading, setIsFading] = useState(fade);
@@ -198,7 +202,7 @@ function Navbar({ fade, inverted }) {
   ];
 
   return (
-    <>
+    <NavbarSticky>
       <NavbarWrapper $isVisible={isVisible} $fade={isFading} $scrolled={scrolled}>
         {/* Desktop Links */}
         <LinksWrapper>
@@ -249,7 +253,7 @@ function Navbar({ fade, inverted }) {
       </Sidebar>
 
       <SidebarBackground onClick={() => setSidebarOpen(false)} onMouseEnter={() => setSidebarOpen(false)} open={sidebarOpen}></SidebarBackground>
-    </>
+    </NavbarSticky>
   );
 }
 

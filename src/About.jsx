@@ -115,22 +115,11 @@ const BrandImage = styled.img`
   border-radius: 8px;
 `;
 
-const NavbarWrapper = styled.div`
-  position: sticky;
-  top: 0;
-  padding: 0 80px;
-  @media (max-width: 999px) {
-    padding: 0 20px;
-  }
-`;
-
 function About() {
   return (
     <>
       <AboutWrapper>
-        <NavbarWrapper>
-          <Navbar fade={false} />
-        </NavbarWrapper>
+        <Navbar fade={false} />
         <AboutContent>
           <VideoBackground height={65} />
           <TextWrapper>

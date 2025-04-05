@@ -26,21 +26,10 @@ const AppHome = styled.div`
   }
 `;
 
-const NavbarWrapper = styled.div`
-  position: sticky;
-  top: 0;
-  padding: 0 80px;
-  @media (max-width: 999px) {
-    padding: 0 20px;
-  }
-`;
-
 function App() {
   return (
     <AppWrapper>
-      <NavbarWrapper>
-        <Navbar fade={true} />
-      </NavbarWrapper>
+      <Navbar fade={true} />
       <AppHome>
         <VideoBackground height={100} />
         <Introduction />

@@ -75,11 +75,16 @@ const EditionParagraph = styled.p`
   color: #898989;
 `;
 
+const NavbarWrapper = styled.div`
+  position: sticky;
+  top: 0;
+`;
+
 function Collection() {
   return (
     <CollectionWrapper>
+      <Navbar fade={false} inverted={true} />
       <Content>
-        <Navbar fade={false} inverted={true} />
         <TextWrapper>
           <TaglineWrapper>
             <Tagline>Collezione 2025</Tagline>
