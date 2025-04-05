@@ -17,8 +17,10 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${(props) => (props.$scrolled ? "black" : "transparent")}; 
-  transition: background 0.3s ease-in-out;
+  background: ${(props) => (props.$scrolled ? "black" : "transparent")};
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  transition: background 0.3s ease-in-out, 
+    ${(props) => (props.$fade ? "opacity 2s ease-in-out" : "none")};
   z-index: 5;
 
   padding: 0 80px;
