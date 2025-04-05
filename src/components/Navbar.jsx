@@ -125,7 +125,7 @@ const HamburgerButton = styled.div`
 const Sidebar = styled.div`
   position: fixed;
   top: 0;
-  right: ${(props) => (props.open ? "0" : "-100%")}; /* Mostra/Nasconde il menu */
+  right: ${(props) => (props.$open ? "0" : "-100%")}; /* Mostra/Nasconde il menu */
   width: 250px;
   height: 100%;
   background-color: #ffffff;
@@ -162,7 +162,7 @@ const SidebarLink = styled.span`
 const SidebarBackground = styled.div`
   position: fixed;
   top: 0;
-  right: ${(props) => (props.open ? "0" : "100%")};
+  right: ${(props) => (props.$open ? "0" : "100%")};
   width: 100%;
   height: 100%;
   display: flex;
@@ -246,7 +246,7 @@ function Navbar({ fade, inverted }) {
       </NavbarWrapper>
 
       {/* Sidebar Menu */}
-      <Sidebar open={sidebarOpen}>
+      <Sidebar $open={sidebarOpen}>
         <CloseButton onClick={() => setSidebarOpen(false)}>
           <FiX style={{ color: "black" }} />
         </CloseButton>
@@ -257,7 +257,7 @@ function Navbar({ fade, inverted }) {
         ))}
       </Sidebar>
 
-      <SidebarBackground onClick={() => setSidebarOpen(false)} onMouseEnter={() => setSidebarOpen(false)} open={sidebarOpen}></SidebarBackground>
+      <SidebarBackground onClick={() => setSidebarOpen(false)} onMouseEnter={() => setSidebarOpen(false)} $open={sidebarOpen}></SidebarBackground>
     </NavbarSticky>
   );
 }
