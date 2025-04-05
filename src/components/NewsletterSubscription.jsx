@@ -7,7 +7,7 @@ import "@fontsource/noto-sans/600.css";
 
 const NewsletterWrapper = styled.div`
   /* background-color: blue; */
-  height: 70vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ const TextWrapper = styled.div`
 const Text = styled.span`
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 400;
-  font-size: clamp(24px, 5vw, 45px);
+  font-size: clamp(14px, 5vw, 45px);
   line-height: 1.2; /* Usa un valore relativo */
   color: rgb(29, 29, 31);
 `;
