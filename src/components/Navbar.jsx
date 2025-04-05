@@ -6,6 +6,12 @@ import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+const NavbarSticky = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 10;
+`;
+
 const NavbarWrapper = styled.div`
   min-height: 75px;
   display: flex;
@@ -162,11 +168,6 @@ const SidebarBackground = styled.div`
   transition: right 0.3s ease-in-out;
   z-index: 1;
   /* background-color: red; */
-`;
-
-const NavbarSticky = styled.div`
-  position: sticky;
-  top: 0;
 `;
 
 function Navbar({ fade, inverted }) {
