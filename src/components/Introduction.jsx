@@ -80,31 +80,29 @@ const TextLimited = styled.span`
 
 function Introduction() {
   return (
-    <>
-      <TextWrapperHeight>
-        <TextWrapper>
-          <TextLimited>
-            Edizione Numerata
-          </TextLimited>
+    <TextWrapperHeight>
+      <TextWrapper>
+        <TextLimited>
+          Edizione Numerata
+        </TextLimited>
 
-          <LeftTextWrapper>
-            <TextContainer>
-              <TextIntro>
-                Lancio della collezione 2025
-              </TextIntro>
-            </TextContainer>
-          </LeftTextWrapper>
+        <LeftTextWrapper>
+          <TextContainer>
+            <TextIntro>
+              Lancio della collezione 2025
+            </TextIntro>
+          </TextContainer>
+        </LeftTextWrapper>
 
-          <RightTextWrapper>
-            <TextContainer>
-              <TextP>
-                Un incontro senza tempo tra un design minimalista e una forma funzionale.
-              </TextP>
-            </TextContainer>
-          </RightTextWrapper>
-        </TextWrapper>
-      </TextWrapperHeight>
-    </>
+        <RightTextWrapper>
+          <TextContainer>
+            <TextP>
+              Un incontro senza tempo tra un design minimalista e una forma funzionale.
+            </TextP>
+          </TextContainer>
+        </RightTextWrapper>
+      </TextWrapper>
+    </TextWrapperHeight>
   )
 }
 

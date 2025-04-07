@@ -12,7 +12,6 @@ import { LoremIpsum } from 'react-lorem-ipsum';
 const AppWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  /* background-color: #b18282; */
   box-sizing: border-box;
 `;
 
