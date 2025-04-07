@@ -76,10 +76,10 @@ const StyledText = styled.span`
 `;
 
 const ContactButton = styled.button`
-  background-color: black;
+  background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
+  color: ${(props) => (props.$scrolled ? "black" : "white")};
   border: none;
   border-radius: 8px;
-  color: white;
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -89,14 +89,14 @@ const ContactButton = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: white;
-    color: rgb(29, 29, 31);
+    background-color: ${(props) => (props.$scrolled ? "#212529" : "white")};
+    color: ${(props) => (props.$scrolled ? "white" : "black")};
   }
 `;
 
 const GithubButton = styled.button`
-  background-color: black;
-  color: white;
+  background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
+  color: ${(props) => (props.$scrolled ? "black" : "white")};
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -106,8 +106,8 @@ const GithubButton = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: ${(props) => (props.$scrolled ? "#212529" : "white")};
+    color: ${(props) => (props.$scrolled ? "white" : "black")};
   }
 `;
 
@@ -233,10 +233,10 @@ function Navbar({ fade, inverted }) {
         </BrandNameLogo>
 
         <OtherLinkWrapper>
-          <GithubButton onClick={() => window.open(links[4].path, "_blank")}>
+          <GithubButton $scrolled={scrolled} onClick={() => window.open(links[4].path, "_blank")}>
             <FaGithub />
           </GithubButton>
-          <ContactButton>Contatti</ContactButton>
+          <ContactButton $scrolled={scrolled}>Contatti</ContactButton>
         </OtherLinkWrapper>
 
         {/* Hamburger Button (Solo Mobile) */}
