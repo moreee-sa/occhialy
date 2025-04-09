@@ -8,7 +8,6 @@ import LoremIpsum from "react-lorem-ipsum";
 
 const CollectionWrapper = styled.div`
   width: 100%;
-  height: 100vh;
   box-sizing: border-box;
 `;
 
@@ -17,6 +16,7 @@ const Content = styled.div`
   flex-direction: column;
   height: 65%;
   padding: 0 80px;
+  margin-top: 50px;
   @media (max-width: 999px) {
     padding: 0 20px;
   }
@@ -32,6 +32,10 @@ const TextWrapper = styled.div`
   flex-direction: column;
   color: #000000;
   text-align: center;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    align-items: flex-start;
+  }
 `;
 
 const TaglineWrapper = styled.div`
@@ -63,9 +67,13 @@ const SubTagline = styled.span`
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 400;
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 40px;
-`; 
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 33px;
+  }
+`;
 
 const EditionParagraph = styled.p`
   font-family: "Noto Sans", sans-serif;
