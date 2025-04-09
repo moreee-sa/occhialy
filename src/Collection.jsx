@@ -59,7 +59,7 @@ const SubTaglineWrapper = styled.div`
   /* background-color: red; */
 `;
 
-const SubTagline = styled.p`
+const SubTagline = styled.span`
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 400;
   margin-top: 20px;
