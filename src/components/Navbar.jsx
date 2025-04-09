@@ -77,7 +77,7 @@ const StyledText = styled.span`
 
 const ContactButton = styled.button`
   background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
-  color: ${(props) => (props.$scrolled ? "black" : "white !important")};
+  color: ${(props) => (props.$scrolled ? "black" : "white")};
   border: none;
   border-radius: 8px;
   font-family: "Noto Sans", sans-serif;
@@ -237,7 +237,9 @@ function Navbar({ fade, inverted }) {
             <FaGithub />
           </GithubButton>
           <ContactButton $scrolled={scrolled}>
-            <Link to={links[3].path} style={{ textDecoration: "none", color: "inherit"}}>
+            <Link
+              to={links[3].path}
+              style={{ textDecoration: "none", color: "inherit"}}>
               Contatti
             </Link>
           </ContactButton>
