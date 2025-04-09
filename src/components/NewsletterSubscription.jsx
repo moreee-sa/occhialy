@@ -27,6 +27,7 @@ const FormData = styled.form`
   justify-content: space-between;
   outline: 1px solid #d1d1d1;
   transition: box-shadow 0.3s ease;
+  background-color: white;
 
   &:focus-within {
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -94,27 +95,25 @@ function NewsletterSubscription() {
   };
 
   return (
-    <>
-      <NewsletterWrapper>
-        <TextWrapper>
-          <Text>
-            Tieniti informato e non perderti niente.
-          </Text>
-        </TextWrapper>
-        <FormData onSubmit={handleSubmit}>
-          <EmailInput
-            type="email"
-            name="email"
-            id="email"
-            placeholder={sent? "Email inviata" : "Inserisci la tua email"}
-            required
-            value={email}
-            onChange={handleChange}
-          />
-          <SendButton type="submit">Invia</SendButton>
-        </FormData>
-      </NewsletterWrapper>
-    </>
+    <NewsletterWrapper>
+      <TextWrapper>
+        <Text>
+          Tieniti informato e non perderti niente.
+        </Text>
+      </TextWrapper>
+      <FormData onSubmit={handleSubmit}>
+        <EmailInput
+          type="email"
+          name="email"
+          id="email"
+          placeholder={sent? "Email inviata" : "Inserisci la tua email"}
+          required
+          value={email}
+          onChange={handleChange}
+        />
+        <SendButton type="submit">Invia</SendButton>
+      </FormData>
+    </NewsletterWrapper>
   )
 }
 

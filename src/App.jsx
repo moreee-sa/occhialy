@@ -36,9 +36,9 @@ function App() {
       <div style={{ backgroundColor: "blue", height: "100px", display: "none" }}>
         <LoremIpsum p={2} />
       </div>
-      <Collection/>
-      <NewsletterSubscription/>
-      <Footer/>
+      <Collection />
+      <NewsletterSubscription id='contact-form' />
+      <Footer />
     </AppWrapper>
   )
 }

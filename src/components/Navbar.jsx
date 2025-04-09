@@ -77,7 +77,7 @@ const StyledText = styled.span`
 
 const ContactButton = styled.button`
   background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
-  color: ${(props) => (props.$scrolled ? "black" : "white")};
+  color: ${(props) => (props.$scrolled ? "black" : "white !important")};
   border: none;
   border-radius: 8px;
   font-family: "Noto Sans", sans-serif;
@@ -236,7 +236,11 @@ function Navbar({ fade, inverted }) {
           <GithubButton $scrolled={scrolled} onClick={() => window.open(links[4].path, "_blank")}>
             <FaGithub />
           </GithubButton>
-          <ContactButton $scrolled={scrolled}>Contatti</ContactButton>
+          <ContactButton $scrolled={scrolled}>
+            <Link to={links[3].path} style={{ textDecoration: "none", color: "inherit"}}>
+              Contatti
+            </Link>
+          </ContactButton>
         </OtherLinkWrapper>
 
         {/* Hamburger Button (Solo Mobile) */}

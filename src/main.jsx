@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import About from './About.jsx'
 import Collection from './Collection.jsx'
+import Contacts from './Contacts.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/contact" element={<Contacts />} />
       </Routes>
     </HashRouter>
   </StrictMode>
