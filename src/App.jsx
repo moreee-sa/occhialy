@@ -7,6 +7,7 @@ import Collection from './components/Showcase';
 import NewsletterSubscription from './components/NewsletterSubscription';
 import Footer from './components/Footer';
 import VideoBackground from "./components/VideoBackground";
+import GetPageTitle from './components/GetPageTitle';
 import { LoremIpsum } from 'react-lorem-ipsum';
 
 const AppWrapper = styled.div`
@@ -28,6 +29,7 @@ const AppHome = styled.div`
 function App() {
   return (
     <AppWrapper>
+      <GetPageTitle />
       <Navbar fade={true} />
       <AppHome>
         <VideoBackground height={100} />

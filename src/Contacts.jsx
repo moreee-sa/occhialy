@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import styled from "styled-components";
 import NewsletterSubscription from "./components/NewsletterSubscription";
 import Footer from "./components/Footer";
+import GetPageTitle from "./components/GetPageTitle";
 
 const ContactWrapper = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const FullHeightNewsletter = styled.div`
 function Contact() {
   return (
     <ContactWrapper>
+      <GetPageTitle />
       <Navbar inverted={true} />
       <FullHeightNewsletter>
         <NewsletterSubscription />

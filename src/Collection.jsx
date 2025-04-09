@@ -5,6 +5,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import LoremIpsum from "react-lorem-ipsum";
+import GetPageTitle from "./components/GetPageTitle";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -91,6 +92,7 @@ const NavbarWrapper = styled.div`
 function Collection() {
   return (
     <CollectionWrapper>
+     <GetPageTitle />
       <Navbar fade={false} inverted={true} />
       <Content>
         <TextWrapper>
