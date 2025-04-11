@@ -83,7 +83,8 @@ function Footer() {
           {socialLinks.map((item) => (
             <SocialLink
               key={item.id}
-              href={item.path}
+              href="https://github.com/moreee-sa/occhialy"
+              target="blank"
             >
               {item.name}
             </SocialLink>
