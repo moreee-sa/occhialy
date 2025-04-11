@@ -3,6 +3,7 @@ import VideoBackground from "./components/VideoBackground";
 import AboutSection from "./components/AboutSection";
 import styled from "styled-components";
 import GetPageTitle from "./components/GetPageTitle";
+import Footer from "./components/Footer";
 
 const AboutWrapper = styled.div`
   width: 100%;
@@ -29,6 +30,7 @@ function About() {
         <VideoBackground height={65} />
         <AboutSection />
       </AboutHome>
+      <Footer />
     </AboutWrapper>
   )
 }
