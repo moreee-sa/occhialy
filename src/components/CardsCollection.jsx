@@ -69,7 +69,7 @@ const CardInfoParagraph = styled.span`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 8px;
   object-fit: cover;
 `;
 
@@ -86,22 +86,19 @@ const CardInfoHidden = styled.span`
 
 const Card = styled.div`
   position: relative;
-  border-radius: 12px;
+  border-radius: 8px;
   color: white;
-  /* background-color: red; */
   text-align: center;
-  /* padding: 20px; */
   height: 400px; /* Imposta un'altezza fissa o usa min-height */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   &:hover{
-    /* background-color: blue; */
     transform: translateY(-15px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
   }
 
   &:hover ${CardInfo} {
