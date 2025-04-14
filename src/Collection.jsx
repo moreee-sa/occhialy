@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar"
 import styled from "styled-components"
 import '@fontsource/libre-baskerville';
@@ -23,7 +24,6 @@ const Content = styled.div`
   @media (max-width: 999px) {
     padding: 20px 20px;
   }
-  /* background-color: #b18282; */
 `;
 
 const TextWrapper = styled.div`
@@ -44,7 +44,6 @@ const TextWrapper = styled.div`
 
 const TaglineWrapper = styled.div`
   width: 50%;
-  /* background-color: red; */
 `;
 
 const Tagline = styled.p`
@@ -64,7 +63,6 @@ const Tagline = styled.p`
 
 const SubTaglineWrapper = styled.div`
   width: 80%;
-  /* background-color: red; */
 `;
 
 const SubTagline = styled.span`
@@ -87,12 +85,75 @@ const EditionParagraph = styled.p`
   color: #898989;
 `;
 
-const NavbarWrapper = styled.div`
-  position: sticky;
-  top: 0;
+const FilterContainer = styled.div`
+  margin-bottom: 25px;
+  padding: 10px 0;
+  border-radius: 8px;
+`;
+
+const FilterWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+const FilterBox = styled.div`
+  width: 188px;
+  height: 36px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #200b0b;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: #252933;
+  }
+`;
+
+const FilterSelect = styled.select`
+  border: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 10px;
+  background-color: transparent;
+  color: #aca8a8;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  user-select: none;
+`;
+
+const FilterOption = styled.option`
+  background-color: #200b0b;
+  color: #aca8a8;
+`;
+
+const FilterLabel = styled.span`
+  color: #aca8a8;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
 `;
 
 function Collection() {
+  const [isStockChecked, setIsStockChecked] = useState(false);
+  const [selectedColor, setSelectedColor] = useState("all");
+  
+  const handleStockCheckbox = () => {
+    setIsStockChecked((prev) => !prev);
+  };
+
+  const handleColorChange = (event) => {
+    setSelectedColor(event.target.value);
+    console.log("Colore selezionato:", event.target.value);
+  };
+
   return (
     <CollectionWrapper>
      <GetPageTitle />
@@ -109,7 +170,38 @@ function Collection() {
             </SubTagline>
           </SubTaglineWrapper>
         </TextWrapper>
-        <CardsCollection />
+
+        <FilterContainer>
+          <FilterWrapper>
+
+            <FilterBox>
+              <FilterSelect id="color" name="color" onChange={handleColorChange}>
+                <FilterOption value="all">Tutti i colori</FilterOption>
+                <FilterOption value="black">Black</FilterOption>
+                <FilterOption value="gold">Gold</FilterOption>
+                <FilterOption value="silver">Silver</FilterOption>
+                <FilterOption value="white">White</FilterOption>
+              </FilterSelect>
+            </FilterBox>
+
+            <FilterBox onClick={handleStockCheckbox}>
+              <FilterLabel>
+                Disponibilita'
+              </FilterLabel>
+              <input
+                type="checkbox"
+                name="stock"
+                value="Stock"
+                checked={isStockChecked}
+                onChange={handleStockCheckbox}
+                style={{ cursor: "pointer" }}
+              />
+            </FilterBox>
+
+          </FilterWrapper>
+        </FilterContainer>
+
+      <CardsCollection color={selectedColor} stock={isStockChecked}/>
       </Content>
       <Footer />
     </CollectionWrapper>

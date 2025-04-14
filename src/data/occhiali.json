@@ -5,7 +5,9 @@
     "info": "Un design audace che evoca eleganza e forza.",
     "hiddenInfo": "Testo Nascosto",
     "path": "/1",
-    "imageUrl": "./image/glasses/glasses4.png"
+    "imageUrl": "./image/glasses/glasses4.png",
+    "color": "black",
+    "availability": "Stock"
   },
   {
     "id": 1,
@@ -13,7 +15,9 @@
     "info": "L'unione perfetta di stile raffinato e modernità.",
     "hiddenInfo": "Testo Nascosto",
     "path": "/2",
-    "imageUrl": "./image/glasses/glasses2.png"
+    "imageUrl": "./image/glasses/glasses2.png",
+    "color": "gold",
+    "availability": "Stock"
   },
   {
     "id": 2,
@@ -21,7 +25,9 @@
     "info": "Una fusione di tecnologia avanzata e design futuristico.",
     "hiddenInfo": "Testo Nascosto",
     "path": "/3",
-    "imageUrl": "./image/glasses/glasses1.png"
+    "imageUrl": "./image/glasses/glasses1.png",
+    "color": "silver",
+    "availability": "Stock"
   },
   {
     "id": 3,
@@ -29,6 +35,88 @@
     "info": "Semplicità sofisticata con una visione chiara e pura.",
     "hiddenInfo": "Testo Nascosto",
     "path": "/4",
-    "imageUrl": "./image/glasses/glasses3.png"
+    "imageUrl": "./image/glasses/glasses3.png",
+    "color": "white",
+    "availability": "Stock"
+  },
+  {
+    "id": 4,
+    "nome": "Nero Opaco",
+    "info": "Un design moderno con un tocco di mistero.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/5",
+    "imageUrl": "./image/glasses/glasses4.png",
+    "color": "black",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": 5,
+    "nome": "Oro Brillante",
+    "info": "Un design che cattura la luce e l'attenzione.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/6",
+    "imageUrl": "./image/glasses/glasses2.png",
+    "color": "gold",
+    "availability": "Stock"
+  },
+  {
+    "id": 6,
+    "nome": "Argento Satinato",
+    "info": "Un design elegante e senza tempo.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/7",
+    "imageUrl": "./image/glasses/glasses1.png",
+    "color": "silver",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": 7,
+    "nome": "Bianco Perla",
+    "info": "Un design puro e sofisticato.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/8",
+    "imageUrl": "./image/glasses/glasses3.png",
+    "color": "white",
+    "availability": "Stock"
+  },
+  {
+    "id": 8,
+    "nome": "Nero Classico",
+    "info": "Un design intramontabile per ogni occasione.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/9",
+    "imageUrl": "./image/glasses/glasses4.png",
+    "color": "black",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": 9,
+    "nome": "Oro Antico",
+    "info": "Un design che unisce tradizione e modernità.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/10",
+    "imageUrl": "./image/glasses/glasses2.png",
+    "color": "gold",
+    "availability": "Stock"
+  },
+  {
+    "id": 10,
+    "nome": "Argento Lucido",
+    "info": "Un design brillante per uno stile unico.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/11",
+    "imageUrl": "./image/glasses/glasses1.png",
+    "color": "silver",
+    "availability": "Out of Stock"
+  },
+  {
+    "id": 11,
+    "nome": "Bianco Ghiaccio",
+    "info": "Un design fresco e moderno.",
+    "hiddenInfo": "Testo Nascosto",
+    "path": "/12",
+    "imageUrl": "./image/glasses/glasses3.png",
+    "color": "white",
+    "availability": "Stock"
   }
 ]

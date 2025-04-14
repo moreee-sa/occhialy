@@ -116,32 +116,28 @@ const Card = styled.div`
   }
 `;
 
-function CardsCollection({ color, stock }) {
+function CardsCollectionPreview () {
   return (
     <GridContainer>
-      {occhiali
-        .filter((item) => {
-          const colorMatch = color === "all" || item.color === color;
-          const stockMatch = !stock || item.availability === "Stock";
-
-          if (colorMatch && stockMatch) {
-            return true;
-          }
-          return false;
-        })
-        .map((item) => (
-          <Card key={item.id}>
-            <CardShadowInset />
-            <CardInfo>
-              <CardInfoText>{item.nome}</CardInfoText>
-              <CardInfoParagraph>{item.info}</CardInfoParagraph>
-              <CardInfoHidden>{item.hiddenInfo}</CardInfoHidden>
-            </CardInfo>
-            <Image src={item.imageUrl} style={{ height: "400px" }} />
-          </Card>
-        ))}
+      {occhiali.slice(0, 4).map((item) => (
+        <Card key={item.id}>
+          <CardShadowInset/>
+          <CardInfo>
+            <CardInfoText>
+              {item.nome}
+            </CardInfoText>
+            <CardInfoParagraph>
+              {item.info}
+            </CardInfoParagraph>
+            <CardInfoHidden>
+              {item.hiddenInfo}
+            </CardInfoHidden>
+          </CardInfo>
+          <Image src={item.imageUrl} style={{ height: "400px" }} />
+        </Card>
+      ))}
     </GridContainer>
-  );
+  )
 }
 
-export default CardsCollection;
+export default CardsCollectionPreview
