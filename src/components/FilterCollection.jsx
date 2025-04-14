@@ -16,15 +16,15 @@ const FilterWrapper = styled.div`
 `;
 
 const FilterBox = styled.div`
-  width: 188px;
-  height: 36px;
+  width: 160px;
+  height: 46px;
   border-radius: 4px;
   box-sizing: border-box;
   transition: background-color 0.2s ease;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #200b0b;
+  background-color: #121212;
   cursor: pointer;
   user-select: none;
 
@@ -39,8 +39,9 @@ const FilterSelect = styled.select`
   height: 100%;
   outline: none;
   padding: 0 10px;
+  margin-right: 10px;
   background-color: transparent;
-  color: #aca8a8;
+  color: #ffffff;
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -48,15 +49,20 @@ const FilterSelect = styled.select`
 `;
 
 const FilterOption = styled.option`
-  background-color: #200b0b;
+  background-color: #121212;
   color: #aca8a8;
 `;
 
 const FilterLabel = styled.span`
-  color: #aca8a8;
+  color: #ffffff;
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
+`;
+
+const FilterCheckbox = styled.input`
+  height: 16px;
+  width: 16px;
 `;
 
 function Filter() {
@@ -91,12 +97,13 @@ function Filter() {
             <FilterLabel>
               Disponibilita'
             </FilterLabel>
-            <input
+            <FilterCheckbox
               type="checkbox"
               name="stock"
               value="Stock"
               checked={isStockChecked}
               onChange={handleStockCheckbox}
+              onClick={handleStockCheckbox}
               style={{ cursor: "pointer" }}
             />
           </FilterBox>
