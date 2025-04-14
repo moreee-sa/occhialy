@@ -75,7 +75,6 @@ function Filter() {
 
   const handleColorChange = (event) => {
     setSelectedColor(event.target.value);
-    console.log("Colore selezionato:", event.target.value);
   };
 
   return (
