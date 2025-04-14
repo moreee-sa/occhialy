@@ -7,6 +7,7 @@ import "@fontsource/noto-sans/600.css";
 import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
 import CardsCollection from "./components/CardsCollection";
+import Footer from "./components/Footer";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -110,6 +111,7 @@ function Collection() {
         </TextWrapper>
         <CardsCollection />
       </Content>
+      <Footer />
     </CollectionWrapper>
   )
 }
