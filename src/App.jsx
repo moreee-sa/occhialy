@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
-import Collection from './components/Showcase';
+import CollectionShowcase from './components/Showcase';
 import NewsletterSubscription from './components/NewsletterSubscription';
 import Footer from './components/Footer';
 import VideoBackground from "./components/VideoBackground";
@@ -38,7 +38,7 @@ function App() {
       <div style={{ backgroundColor: "blue", height: "100px", display: "none" }}>
         <LoremIpsum p={2} />
       </div>
-      <Collection />
+      <CollectionShowcase />
       <NewsletterSubscription id='contact-form' />
       <Footer />
     </AppWrapper>

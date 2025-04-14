@@ -6,6 +6,7 @@ import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
+import CardsCollection from "./components/CardsCollection";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -16,10 +17,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   height: 65%;
-  padding: 0 80px;
+  padding: 80px 80px;
   margin-top: 50px;
   @media (max-width: 999px) {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
   /* background-color: #b18282; */
 `;
@@ -33,6 +34,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   color: #000000;
   text-align: center;
+  margin-bottom: 50px;
   @media only screen and (max-width: 768px) {
     text-align: left;
     align-items: flex-start;
@@ -106,6 +108,7 @@ function Collection() {
             </SubTagline>
           </SubTaglineWrapper>
         </TextWrapper>
+        <CardsCollection />
       </Content>
     </CollectionWrapper>
   )
