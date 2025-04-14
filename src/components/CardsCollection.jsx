@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
+import occhiali from "../data/occhiali.json";
 
 const GridContainer = styled.div`
   display: grid;
@@ -115,41 +116,6 @@ const Card = styled.div`
   }
 `;
 
-const occhiali = [
-  {
-    id: 0,
-    nome: "Nero Lucente",
-    info: "Un design audace che evoca eleganza e forza.",
-    hiddenInfo: "Testo Nascosto",
-    path: "/1",
-    imageUrl: "./image/glasses/glasses4.png"
-  },
-  {
-    id: 1,
-    nome: "Oro Luminoso",
-    info: "L'unione perfetta di stile raffinato e modernità.",
-    hiddenInfo: "Testo Nascosto",
-    path: "/2",
-    imageUrl: "./image/glasses/glasses2.png"
-  },
-  {
-    id: 2,
-    nome: "Titanio Raffinato",
-    info: "Una fusione di tecnologia avanzata e design futuristico.",
-    hiddenInfo: "Testo Nascosto",
-    path: "/3",
-    imageUrl: "./image/glasses/glasses1.png"
-  },
-  {
-    id: 3,
-    nome: "Vetro Cristallino",
-    info: "Semplicità sofisticata con una visione chiara e pura.",
-    hiddenInfo: "Testo Nascosto",
-    path: "/4",
-    imageUrl: "./image/glasses/glasses3.png"
-  },
-];
-
 function CardsCollection () {
   return (
     <>
@@ -176,4 +142,4 @@ function CardsCollection () {
   )
 }
 
-export default CardsCollection
+export default CardsCollection;
