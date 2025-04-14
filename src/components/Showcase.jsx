@@ -2,7 +2,7 @@ import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import CardsCollectionPreview from "./CardsCollectionPreview";
+import CardsCollection from "./CardsCollection";
 
 const ShowcaseWrapper = styled.div`
   background-color: #ededed;
@@ -64,7 +64,7 @@ function Collection() {
             <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
           </TextShowcaseWrapper>
         </TextWrapper>
-        <CardsCollectionPreview/>
+        <CardsCollection color="all" stock={false} limit={4} />
       </ShowcaseWrapper>
     </>
   )

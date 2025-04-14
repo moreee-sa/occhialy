@@ -81,6 +81,7 @@ const CardInfoHidden = styled.span`
   text-align: left;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  text-transform: uppercase;
 `;
 
 const Card = styled.div`
@@ -116,30 +117,29 @@ const Card = styled.div`
   }
 `;
 
-function CardsCollection({ color, stock }) {
+function CardsCollection({ color, stock, limit }) {
+  const filteredOcchiali = occhiali
+    .filter((item) => {
+      const colorMatch = color === "all" || item.color === color;
+      const stockMatch = !stock || item.availability === "Stock";
+      return colorMatch && stockMatch;
+    });
+
+  const displayedOcchiali = limit ? filteredOcchiali.slice(0, limit) : filteredOcchiali;
+
   return (
     <GridContainer>
-      {occhiali
-        .filter((item) => {
-          const colorMatch = color === "all" || item.color === color;
-          const stockMatch = !stock || item.availability === "Stock";
-
-          if (colorMatch && stockMatch) {
-            return true;
-          }
-          return false;
-        })
-        .map((item) => (
-          <Card key={item.id}>
-            <CardShadowInset />
-            <CardInfo>
-              <CardInfoText>{item.nome}</CardInfoText>
-              <CardInfoParagraph>{item.info}</CardInfoParagraph>
-              <CardInfoHidden>{item.hiddenInfo}</CardInfoHidden>
-            </CardInfo>
-            <Image src={item.imageUrl} style={{ height: "400px" }} />
-          </Card>
-        ))}
+      {displayedOcchiali.map((item) => (
+        <Card key={item.id}>
+          <CardShadowInset />
+          <CardInfo>
+            <CardInfoText>{item.nome}</CardInfoText>
+            <CardInfoParagraph>{item.info}</CardInfoParagraph>
+            <CardInfoHidden>{item.color} - {item.availability}</CardInfoHidden>
+          </CardInfo>
+          <Image src={item.imageUrl} style={{ height: "400px" }} />
+        </Card>
+      ))}
     </GridContainer>
   );
 }
