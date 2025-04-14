@@ -35,7 +35,6 @@ const BrandNameLogo = styled.div`
   font-family: "Noto Sans", sans-serif;
   font-weight: 600;
   font-size: 22px;
-  color: ${(props) => (props.$inverted ? "black" : "white")};
 `;
 
 const LinksWrapper = styled.div`
@@ -67,7 +66,10 @@ const StyledText = styled.span`
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  color: ${(props) => (props.$inverted ? "black" : "white")};
+  color: ${(props) => {
+    if (props.$scrolled) return "white";
+    return props.$inverted ? "black" : "white";
+  }};
   transition: color 0.2s ease;
 
   &:hover {
@@ -215,17 +217,17 @@ function Navbar({ fade, inverted }) {
             .filter((link) => Number(link.id) !== 3 && Number(link.id) !== 4)
             .map((link) => (
               <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>
-                <StyledText $inverted={isInverted}>{link.name}</StyledText>
+                <StyledText $inverted={isInverted} $scrolled={scrolled}>{link.name}</StyledText>
               </Link>
             ))}
         </LinksWrapper>
         
-        <BrandNameLogo $inverted={isInverted}>
+        <BrandNameLogo>
           <Link
             to={links[0].path}
             style={{ 
               textDecoration: "none", 
-              color: isInverted ? "black" : "white" 
+              color: scrolled ? "white" : (isInverted ? "black" : "white") 
             }}
           >
             Occhialy
