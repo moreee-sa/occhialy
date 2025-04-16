@@ -81,7 +81,6 @@ function Filter() {
     <>
       <FilterContainer>
         <FilterWrapper>
-
           <FilterBox>
             <FilterSelect id="color" name="color" onChange={handleColorChange}>
               <FilterOption value="all">Tutti i colori</FilterOption>
@@ -91,7 +90,6 @@ function Filter() {
               <FilterOption value="white">White</FilterOption>
             </FilterSelect>
           </FilterBox>
-
           <FilterBox onClick={handleStockCheckbox}>
             <FilterLabel>
               Disponibilita'
@@ -106,7 +104,6 @@ function Filter() {
               style={{ cursor: "pointer" }}
             />
           </FilterBox>
-
         </FilterWrapper>
       </FilterContainer>
       <CardsCollection color={selectedColor} stock={isStockChecked}/>
