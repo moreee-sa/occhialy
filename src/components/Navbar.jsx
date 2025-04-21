@@ -91,7 +91,7 @@ const ContactButton = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: ${(props) => (props.$scrolled ? "#212529" : "white")};
+    background-color: ${(props) => (props.$scrolled ? "#212529" : "#ced4da")};
     color: ${(props) => (props.$scrolled ? "white" : "black")};
   }
 `;
@@ -108,7 +108,7 @@ const GithubButton = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: ${(props) => (props.$scrolled ? "#212529" : "white")};
+    background-color: ${(props) => (props.$scrolled ? "#212529" : "#ced4da")};
     color: ${(props) => (props.$scrolled ? "white" : "black")};
   }
 `;
