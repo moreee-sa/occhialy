@@ -37,15 +37,16 @@ const FilterBox = styled.div`
   align-items: center;
   cursor: pointer;
   user-select: none;
-  background: linear-gradient(90deg, rgba(34, 43, 54, 1) 0%, rgba(60, 69, 80, 1) 50%, rgba(71, 66, 21, 1) 100%);
+  background: linear-gradient(90deg, rgba(18, 22, 28, 1) 0%, rgba(38, 44, 53, 1) 50%, rgba(47, 43, 18, 1) 100%);
   background-size: 200% 200%;
   transition: background 0.5s ease, transform 0.3s ease;
   animation: ${gradient} 4s ease infinite;
 
   &:hover {
     animation: ${gradient} 2s ease infinite;
-    background: linear-gradient(90deg, rgba(68, 92, 105, 1) 0%, rgba(101, 120, 140, 1) 50%, rgba(148, 179, 60, 1) 100%);
+    background: linear-gradient(90deg, rgba(29, 41, 53, 1) 0%, rgba(53, 65, 80, 1) 50%, rgba(72, 75, 34, 1) 100%);
     background-size: 200% 200%;
+    transform: scale(1.02);
   }
 `;
 
