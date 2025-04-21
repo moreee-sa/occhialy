@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CardsCollection from "./CardsCollection"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
 
 const FilterContainer = styled.div`
@@ -15,21 +15,37 @@ const FilterWrapper = styled.div`
   align-items: center;
 `;
 
+const gradient = keyframes`
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+`;
+
 const FilterBox = styled.div`
   width: 160px;
   height: 46px;
   border-radius: 4px;
   box-sizing: border-box;
-  transition: background-color 0.2s ease;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #121212;
   cursor: pointer;
   user-select: none;
+  background: linear-gradient(90deg, rgba(34, 43, 54, 1) 0%, rgba(60, 69, 80, 1) 50%, rgba(71, 66, 21, 1) 100%);
+  background-size: 200% 200%;
+  transition: background 0.5s ease, transform 0.3s ease;
+  animation: ${gradient} 4s ease infinite;
 
   &:hover {
-    background-color: #252933;
+    animation: ${gradient} 2s ease infinite;
+    background: linear-gradient(90deg, rgba(68, 92, 105, 1) 0%, rgba(101, 120, 140, 1) 50%, rgba(148, 179, 60, 1) 100%);
+    background-size: 200% 200%;
   }
 `;
 
