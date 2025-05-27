@@ -176,10 +176,8 @@ const SidebarBackground = styled.div`
   /* background-color: red; */
 `;
 
-function Navbar({ fade, inverted }) {
+function Navbar({ isFading, isInverted }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isFading, setIsFading] = useState(fade);
-  const [isInverted, setIsInverted] = useState(inverted);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
