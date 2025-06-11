@@ -25,7 +25,7 @@ function About() {
   return (
     <AboutWrapper>
       <GetPageTitle />
-      <Navbar fade={false} />
+      <Navbar isFading={false} />
       <AboutHome>
         <VideoBackground height={65} />
         <AboutSection />

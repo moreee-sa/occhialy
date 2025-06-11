@@ -86,7 +86,7 @@ function Collection() {
   return (
     <CollectionWrapper>
       <GetPageTitle />
-      <Navbar fade={false} inverted={true} />
+      <Navbar isFading={false} isInverted={true} />
       <Content>
         <TextWrapper>
           <TaglineWrapper>

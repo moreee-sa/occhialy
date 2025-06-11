@@ -18,7 +18,7 @@ function Contact() {
   return (
     <ContactWrapper>
       <GetPageTitle />
-      <Navbar inverted={true} />
+      <Navbar isInverted={true} />
       <FullHeightNewsletter>
         <NewsletterSubscription />
       </FullHeightNewsletter>

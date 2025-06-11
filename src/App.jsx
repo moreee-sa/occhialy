@@ -30,7 +30,7 @@ function App() {
   return (
     <AppWrapper>
       <GetPageTitle />
-      <Navbar fade={true} />
+      <Navbar isFading={true} />
       <AppHome>
         <VideoBackground height={100} />
         <Introduction />
