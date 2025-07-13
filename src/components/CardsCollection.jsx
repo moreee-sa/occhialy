@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
-import { MOBILEBREAKPOINT, TABLETBREAKPOINT, LIGHT_PRIMARY_COLOR } from "../lib/constants";
+import { MOBILEBREAKPOINT, TABLETBREAKPOINT, LIGHT_PRIMARY_COLOR, FONTS } from "../lib/constants";
 
 const GridContainer = styled.div`
   display: grid;
@@ -51,7 +51,7 @@ const CardInfo = styled.div`
 `;
 
 const CardInfoText = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 25px;
   line-height: 40px;
@@ -59,7 +59,7 @@ const CardInfoText = styled.span`
 `;
 
 const CardInfoParagraph = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 15px;
   color: #ccc;
@@ -75,7 +75,7 @@ const Image = styled.img`
 `;
 
 const CardInfoHidden = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 13px;
   color: #ccc;

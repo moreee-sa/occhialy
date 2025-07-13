@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import CardsCollection from "./CardsCollection";
-import { SECONDARY_TEXT_COLOR } from "../lib/constants";
+import { SECONDARY_TEXT_COLOR, FONTS} from "../lib/constants";
 
 const ShowcaseWrapper = styled.div`
   background-color: #ededed;
@@ -38,7 +38,7 @@ const TextShowcaseWrapper = styled.div`
 `;
 
 const TextCollection = styled.h1`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: clamp(24px, 5vw, 61px);
   line-height: 80px;
@@ -46,7 +46,7 @@ const TextCollection = styled.h1`
 `;
 
 const TextInfoCollection = styled.span`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 17px;
   line-height: 29px;

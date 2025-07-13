@@ -4,7 +4,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR } from "../lib/constants";
+import { LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR, FONTS} from "../lib/constants";
 
 const NewsletterWrapper = styled.div`
   /* background-color: blue; */
@@ -44,7 +44,7 @@ const SendButton = styled.button`
   border: none;
   border-radius: 8px;
   color: ${LIGHT_PRIMARY_COLOR};
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 14px;
   height: 40px;
@@ -54,7 +54,7 @@ const SendButton = styled.button`
 
 const EmailInput = styled.input`
   width: 100%;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 400;
   line-height: 16px;
   font-size: 16px;
@@ -70,7 +70,7 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: clamp(14px, 5vw, 45px);
   line-height: 1.2; /* Usa un valore relativo */

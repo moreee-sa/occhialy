@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR } from "../lib/constants";
+import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, FONTS } from "../lib/constants";
 
 const FooterWrapper = styled.div`
   height: 30vh;
@@ -21,7 +21,7 @@ const FooterWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 30px;
   line-height: 43px;
@@ -46,7 +46,7 @@ const Rights = styled.div`
   justify-content: center;
   align-items: center;
   grid-column: span 2 / span 2;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
@@ -54,7 +54,7 @@ const Rights = styled.div`
 `;
 
 const SocialLink = styled.a`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 13px;
   line-height: 14px;

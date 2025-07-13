@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR } from "../lib/constants";
+import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR, FONTS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
   display: flex;
@@ -41,7 +41,7 @@ const TextColumn = styled.div`
 
 const HeadingText = styled.div`
   width: 60%;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 22px;
   line-height: 37px;
@@ -53,7 +53,7 @@ const HeadingText = styled.div`
 
 const BodyText = styled.span`
   width: 60%;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 17px;
   line-height: 29px;
@@ -95,7 +95,7 @@ const TaglineWrapper = styled.div`
 `;
 
 const PrimaryTagline = styled.p`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
@@ -106,7 +106,7 @@ const PrimaryTagline = styled.p`
 `;
 
 const SecondaryTagline = styled.p`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;

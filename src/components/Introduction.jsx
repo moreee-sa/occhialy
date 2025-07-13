@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
-import { LIGHT_PRIMARY_COLOR } from "../lib/constants";
+import { LIGHT_PRIMARY_COLOR, FONTS} from "../lib/constants";
 
 const TextWrapperHeight = styled.div`
   height: 80vh;
@@ -44,7 +44,7 @@ const RightTextWrapper = styled.div`
 `;
 
 const TextIntro = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: clamp(24px, 5vw, 42px);
   line-height: 63px;
@@ -60,7 +60,7 @@ const TextContainer = styled.div`
 `;
 
 const TextP = styled.span`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: clamp(18px, 2vw, 22px);
   line-height: 37px;
@@ -68,7 +68,7 @@ const TextP = styled.span`
 `;
 
 const TextLimited = styled.span`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: clamp(18px, 2vw, 22px);
   line-height: 37px;

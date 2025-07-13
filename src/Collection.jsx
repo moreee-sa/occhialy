@@ -6,7 +6,7 @@ import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
 import FilterCollection from "./components/FilterCollection";
 import Footer from "./components/Footer";
-import { MOBILEBREAKPOINT, TABLETBREAKPOINT, DARK_PRIMARY_COLOR } from "./lib/constants";
+import { MOBILEBREAKPOINT, TABLETBREAKPOINT, DARK_PRIMARY_COLOR, FONTS } from "./lib/constants";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -45,7 +45,7 @@ const TaglineWrapper = styled.div`
 `;
 
 const Tagline = styled.p`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   
   @media only screen and (min-width: ${TABLETBREAKPOINT}) {
@@ -64,7 +64,7 @@ const SubTaglineWrapper = styled.div`
 `;
 
 const SubTagline = styled.span`
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   margin-top: 20px;
   font-size: 20px;
@@ -76,7 +76,7 @@ const SubTagline = styled.span`
 `;
 
 const EditionParagraph = styled.p`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;

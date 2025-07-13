@@ -5,7 +5,7 @@ import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { SMALLMOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, DARK_PRIMARY_COLOR } from "../lib/constants";
+import { SMALLMOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, DARK_PRIMARY_COLOR, FONTS} from "../lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;
@@ -33,7 +33,7 @@ const NavbarWrapper = styled.div`
 `;
 
 const BrandNameLogo = styled.div`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 600;
   font-size: 22px;
 `;
@@ -53,7 +53,7 @@ const OtherLinkWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 600;
   font-size: 22px;
   width: 100%;
@@ -64,7 +64,7 @@ const OtherLinkWrapper = styled.div`
 `;
 
 const StyledText = styled.span`
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 14px;
   color: ${(props) => {
@@ -83,7 +83,7 @@ const ContactButton = styled.button`
   color: ${(props) => (props.$scrolled ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR)};
   border: none;
   border-radius: 8px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 15px;
   height: 40px;
@@ -155,7 +155,7 @@ const SidebarLink = styled.span`
   font-size: 18px;
   margin: 20px 0;
   text-decoration: none;
-  font-family: "Noto Sans", sans-serif;
+  font-family: ${FONTS.NOTO_SANS};
 
   &:hover {
     color: gray;
