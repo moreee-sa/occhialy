@@ -2,7 +2,7 @@ import { useState } from "react";
 import CardsCollection from "./CardsCollection"
 import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
-import { MOBILEBREAKPOINT } from "../lib/constants";
+import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR } from "../lib/constants";
 
 const FilterContainer = styled.div`
   margin-bottom: 25px;
@@ -72,7 +72,7 @@ const FilterSelect = styled.select`
   padding: 0 10px;
   margin-right: 10px;
   background-color: transparent;
-  color: #ffffff;
+  color: ${LIGHT_PRIMARY_COLOR};
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -85,7 +85,7 @@ const FilterOption = styled.option`
 `;
 
 const FilterLabel = styled.span`
-  color: #ffffff;
+  color: ${LIGHT_PRIMARY_COLOR};
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;

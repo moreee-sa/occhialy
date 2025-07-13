@@ -3,6 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import CardsCollection from "./CardsCollection";
+import { SECONDARY_TEXT_COLOR } from "../lib/constants";
 
 const ShowcaseWrapper = styled.div`
   background-color: #ededed;
@@ -41,7 +42,7 @@ const TextCollection = styled.h1`
   font-weight: 400;
   font-size: clamp(24px, 5vw, 61px);
   line-height: 80px;
-  color: rgb(29, 29, 31);
+  color: ${SECONDARY_TEXT_COLOR};
 `;
 
 const TextInfoCollection = styled.span`
@@ -49,7 +50,7 @@ const TextInfoCollection = styled.span`
   font-weight: 500;
   font-size: 17px;
   line-height: 29px;
-  color: rgb(110, 110, 115);
+  color: #6e6e73;
 `;
 
 function Collection() {

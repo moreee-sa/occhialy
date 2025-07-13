@@ -5,7 +5,7 @@ import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { SMALLMOBILEBREAKPOINT } from "../lib/constants";
+import { SMALLMOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, DARK_PRIMARY_COLOR } from "../lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;
@@ -18,7 +18,7 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${(props) => (props.$scrolled ? "black" : "transparent")};
+  background: ${(props) => (props.$scrolled ? DARK_PRIMARY_COLOR : "transparent")};
   opacity: ${(props) => (props.$isVisible ? 1 : 0)};
   transition: ${props => 
     props.$fade 
@@ -68,8 +68,8 @@ const StyledText = styled.span`
   font-weight: 500;
   font-size: 14px;
   color: ${(props) => {
-    if (props.$scrolled) return "white";
-    return props.$inverted ? "black" : "white";
+    if (props.$scrolled) return LIGHT_PRIMARY_COLOR;
+    return props.$inverted ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR;
   }};
   transition: color 0.2s ease;
 
@@ -79,8 +79,8 @@ const StyledText = styled.span`
 `;
 
 const ContactButton = styled.button`
-  background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
-  color: ${(props) => (props.$scrolled ? "black" : "white")};
+  background-color: ${(props) => (props.$scrolled ? "#ced4da" : DARK_PRIMARY_COLOR)};
+  color: ${(props) => (props.$scrolled ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR)};
   border: none;
   border-radius: 8px;
   font-family: "Noto Sans", sans-serif;
@@ -93,13 +93,13 @@ const ContactButton = styled.button`
 
   &:hover {
     background-color: ${(props) => (props.$scrolled ? "#212529" : "#ced4da")};
-    color: ${(props) => (props.$scrolled ? "white" : "black")};
+    color: ${(props) => (props.$scrolled ? LIGHT_PRIMARY_COLOR : DARK_PRIMARY_COLOR)};
   }
 `;
 
 const GithubButton = styled.button`
-  background-color: ${(props) => (props.$scrolled ? "#ced4da" : "black")};
-  color: ${(props) => (props.$scrolled ? "black" : "white")};
+  background-color: ${(props) => (props.$scrolled ? "#ced4da" : DARK_PRIMARY_COLOR)};
+  color: ${(props) => (props.$scrolled ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR)};
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -110,14 +110,14 @@ const GithubButton = styled.button`
 
   &:hover {
     background-color: ${(props) => (props.$scrolled ? "#212529" : "#ced4da")};
-    color: ${(props) => (props.$scrolled ? "white" : "black")};
+    color: ${(props) => (props.$scrolled ? LIGHT_PRIMARY_COLOR : DARK_PRIMARY_COLOR)};
   }
 `;
 
 const HamburgerButton = styled.div`
   display: none;
   font-size: 30px;
-  color: white;
+  color: ${LIGHT_PRIMARY_COLOR};
   cursor: pointer;
 
   @media only screen and (max-width: ${SMALLMOBILEBREAKPOINT}) {
@@ -131,7 +131,7 @@ const Sidebar = styled.div`
   right: ${(props) => (props.$open ? "0" : "-100%")}; /* Mostra/Nasconde il menu */
   width: 250px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: ${LIGHT_PRIMARY_COLOR};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,12 +146,12 @@ const CloseButton = styled.div`
   top: 20px;
   right: 20px;
   font-size: 30px;
-  color: white;
+  color: ${LIGHT_PRIMARY_COLOR};
   cursor: pointer;
 `;
 
 const SidebarLink = styled.span`
-  color: #000000;
+  color: ${DARK_PRIMARY_COLOR};
   font-size: 18px;
   margin: 20px 0;
   text-decoration: none;
@@ -181,7 +181,7 @@ function Navbar({ isFading, isInverted }) {
   const [isVisible, setIsVisible] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const colorMenu = scrolled ? "white" : isInverted ? "black" : "white";
+  const colorMenu = scrolled ? LIGHT_PRIMARY_COLOR : isInverted ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -227,7 +227,7 @@ function Navbar({ isFading, isInverted }) {
             to={links[0].path}
             style={{ 
               textDecoration: "none", 
-              color: scrolled ? "white" : (isInverted ? "black" : "white") 
+              color: scrolled ? LIGHT_PRIMARY_COLOR : (isInverted ? DARK_PRIMARY_COLOR : LIGHT_PRIMARY_COLOR) 
             }}
           >
             Occhialy
@@ -256,7 +256,7 @@ function Navbar({ isFading, isInverted }) {
       {/* Sidebar Menu */}
       <Sidebar $open={sidebarOpen}>
         <CloseButton onClick={() => setSidebarOpen(false)}>
-          <FiX style={{ color: "black" }} />
+          <FiX style={{ color: DARK_PRIMARY_COLOR }} />
         </CloseButton>
         {links.map((link) => (
           <Link key={link.id} to={link.path} style={{ textDecoration: "none" }}>

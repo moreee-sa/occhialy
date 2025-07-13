@@ -8,7 +8,6 @@ import NewsletterSubscription from './components/NewsletterSubscription';
 import Footer from './components/Footer';
 import VideoBackground from "./components/VideoBackground";
 import GetPageTitle from './components/GetPageTitle';
-import { LoremIpsum } from 'react-lorem-ipsum';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -35,9 +34,6 @@ function App() {
         <VideoBackground height={100} />
         <Introduction />
       </AppHome>
-      <div style={{ backgroundColor: "blue", height: "100px", display: "none" }}>
-        <LoremIpsum p={2} />
-      </div>
       <CollectionShowcase />
       <NewsletterSubscription id='contact-form' />
       <Footer />

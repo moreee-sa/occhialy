@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { MOBILEBREAKPOINT } from "../lib/constants";
+import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR } from "../lib/constants";
 
 const FooterWrapper = styled.div`
   height: 30vh;
@@ -25,7 +25,7 @@ const LogoWrapper = styled.div`
   font-weight: 500;
   font-size: 30px;
   line-height: 43px;
-  color: white;
+  color: ${LIGHT_PRIMARY_COLOR};
   display: flex;
   align-items: center;
 
@@ -33,15 +33,12 @@ const LogoWrapper = styled.div`
     font-size: 15px;
     line-height: 25px;
   }
-
-  /* background-color: blue; */
 `;
 
 const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background-color: #0a1a61; */
 `;
 
 const Rights = styled.div`
@@ -53,8 +50,7 @@ const Rights = styled.div`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: white;
-  /* background-color: red; */
+  color: ${LIGHT_PRIMARY_COLOR};
 `;
 
 const SocialLink = styled.a`
@@ -62,7 +58,7 @@ const SocialLink = styled.a`
   font-weight: 500;
   font-size: 13px;
   line-height: 14px;
-  color: white;
+  color: ${LIGHT_PRIMARY_COLOR};
   text-decoration: underline;
 `;
 

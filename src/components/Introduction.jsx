@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
+import { LIGHT_PRIMARY_COLOR } from "../lib/constants";
 
 const TextWrapperHeight = styled.div`
   height: 80vh;
@@ -47,7 +48,7 @@ const TextIntro = styled.span`
   font-weight: 400;
   font-size: clamp(24px, 5vw, 42px);
   line-height: 63px;
-  color: rgb(255, 255, 255);
+  color: ${LIGHT_PRIMARY_COLOR};
 `;
 
 const TextContainer = styled.div`
@@ -63,7 +64,7 @@ const TextP = styled.span`
   font-weight: 500;
   font-size: clamp(18px, 2vw, 22px);
   line-height: 37px;
-  color: rgb(255, 255, 255);
+  color: ${LIGHT_PRIMARY_COLOR};
 `;
 
 const TextLimited = styled.span`
@@ -71,7 +72,7 @@ const TextLimited = styled.span`
   font-weight: 500;
   font-size: clamp(18px, 2vw, 22px);
   line-height: 37px;
-  color: rgb(255, 255, 255);
+  color: ${LIGHT_PRIMARY_COLOR};
   display: none;
   @media (max-width: 999px) {
     display: block;
