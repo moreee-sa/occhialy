@@ -94,6 +94,7 @@ const FilterLabel = styled.span`
 const FilterCheckbox = styled.input`
   height: 16px;
   width: 16px;
+  cursor: pointer;
 `;
 
 function Filter() {
@@ -132,7 +133,6 @@ function Filter() {
               checked={isStockChecked}
               onChange={handleStockCheckbox}
               onClick={handleStockCheckbox}
-              style={{ cursor: "pointer" }}
             />
           </FilterBox>
         </FilterWrapper>
