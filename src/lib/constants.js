@@ -7,3 +7,9 @@ export const TABLETBREAKPOINT = "960px";
 export const LIGHT_PRIMARY_COLOR = "#ffffffff";
 export const DARK_PRIMARY_COLOR = "#000000";
 export const SECONDARY_TEXT_COLOR = "#1d1d1f";
+
+// Fonts
+export const FONTS = {
+  NOTO_SANS: '"Noto Sans", sans-serif',
+  LIBRE_BASKERVILLE: '"Libre Baskerville", sans-serif',
+};
