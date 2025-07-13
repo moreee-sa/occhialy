@@ -9,6 +9,7 @@ const Video = styled.video`
   height: ${(props) => props.$height || "100%"};
   object-fit: cover; /* Rende il video responsivo, senza distorsioni */
   z-index: -1; /* Assicura che il video sia dietro al contenuto */
+  background-color: #000;
 `;
 
 function VideoBackground({ height }) {
