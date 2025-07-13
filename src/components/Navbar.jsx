@@ -181,6 +181,7 @@ function Navbar({ isFading, isInverted }) {
   const [isVisible, setIsVisible] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const colorMenu = scrolled ? "white" : isInverted ? "black" : "white";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -248,7 +249,7 @@ function Navbar({ isFading, isInverted }) {
 
         {/* Hamburger Button (Solo Mobile) */}
         <HamburgerButton onClick={() => setSidebarOpen(true)}>
-          <FiMenu color={isInverted ? "black" : "white"} />
+          <FiMenu color={colorMenu} />
         </HamburgerButton>
       </NavbarWrapper>
 
