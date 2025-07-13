@@ -55,19 +55,17 @@ const TextInfoCollection = styled.span`
 
 function Collection() {
   return (
-    <>
-      <ShowcaseWrapper>
-        <TextWrapper>
-          <TextShowcaseWrapper>
-            <TextCollection>La collezione 2025</TextCollection>
-          </TextShowcaseWrapper>
-          <TextShowcaseWrapper>
-            <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
-          </TextShowcaseWrapper>
-        </TextWrapper>
-        <CardsCollection color="all" stock={false} limit={4} />
-      </ShowcaseWrapper>
-    </>
+    <ShowcaseWrapper>
+      <TextWrapper>
+        <TextShowcaseWrapper>
+          <TextCollection>La collezione 2025</TextCollection>
+        </TextShowcaseWrapper>
+        <TextShowcaseWrapper>
+          <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
+        </TextShowcaseWrapper>
+      </TextWrapper>
+      <CardsCollection color="all" stock={false} limit={4} />
+    </ShowcaseWrapper>
   )
 }
 
