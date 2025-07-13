@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { MOBILEBREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const FooterWrapper = styled.div`
   height: 30vh;
@@ -29,7 +29,7 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     font-size: 15px;
     line-height: 25px;
   }

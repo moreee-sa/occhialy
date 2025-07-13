@@ -2,7 +2,7 @@ import { useState } from "react";
 import CardsCollection from "./CardsCollection"
 import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
-import { MOBILEBREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const FilterContainer = styled.div`
   margin-bottom: 25px;
@@ -59,7 +59,7 @@ const FilterBox = styled.div`
     background-size: 200% 200%;
   }
 
-  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     width: 100%;
   }
 `;

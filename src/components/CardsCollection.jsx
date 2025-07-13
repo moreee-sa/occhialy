@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
-import { MOBILEBREAKPOINT, TABLETBREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const GridContainer = styled.div`
   display: grid;
@@ -9,17 +9,17 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   
-  @media only screen and (min-width: ${TABLETBREAKPOINT}) {
+  @media only screen and (min-width: ${TABLET_BREAKPOINT}) {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
   }
 
-  @media only screen and (min-width: ${MOBILEBREAKPOINT}) and (max-width: ${TABLETBREAKPOINT}) {
+  @media only screen and (min-width: ${MOBILE_BREAKPOINT}) and (max-width: ${TABLET_BREAKPOINT}) {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
 
-  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     grid-template-columns: repeat(1, 1fr);
     gap: 35px;
   }

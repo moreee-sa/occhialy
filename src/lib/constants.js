@@ -1,7 +1,7 @@
 // Breakpoints
-export const SMALLMOBILEBREAKPOINT = "480px";
-export const MOBILEBREAKPOINT = "767px";
-export const TABLETBREAKPOINT = "960px";
+export const SMALL_MOBILE_BREAKPOINT = "480px";
+export const MOBILE_BREAKPOINT = "767px";
+export const TABLET_BREAKPOINT = "960px";
 
 // Colors
 export const DARK_PRIMARY_COLOR = "#000000";

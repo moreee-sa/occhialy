@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { MOBILEBREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const AboutSectionWrapper = styled.div`
   margin: 380px 0 80px 0;
   box-sizing: border-box;
   padding: 0 80px;
-  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
+  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     padding: 0;
   }
 `;
