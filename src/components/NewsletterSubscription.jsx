@@ -4,7 +4,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR, FONTS} from "../lib/constants";
+import { COLORS, FONTS } from "../lib/constants";
 
 const NewsletterWrapper = styled.div`
   /* background-color: blue; */
@@ -28,7 +28,7 @@ const FormData = styled.form`
   justify-content: space-between;
   outline: 1px solid #d1d1d1;
   transition: box-shadow 0.3s ease;
-  background-color: ${LIGHT_PRIMARY_COLOR};
+  background-color: ${COLORS.LIGHT_PRIMARY};
 
   &:focus-within {
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -43,7 +43,7 @@ const SendButton = styled.button`
   background-color: black;
   border: none;
   border-radius: 8px;
-  color: ${LIGHT_PRIMARY_COLOR};
+  color: ${COLORS.LIGHT_PRIMARY};
   font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 14px;
@@ -74,7 +74,7 @@ const Text = styled.span`
   font-weight: 400;
   font-size: clamp(14px, 5vw, 45px);
   line-height: 1.2; /* Usa un valore relativo */
-  color: ${SECONDARY_TEXT_COLOR};
+  color: ${COLORS.SECONDARY_TEXT};
 `;
 
 function NewsletterSubscription() {

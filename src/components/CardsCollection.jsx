@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
-import { MOBILEBREAKPOINT, TABLETBREAKPOINT, LIGHT_PRIMARY_COLOR, FONTS } from "../lib/constants";
+import { MOBILEBREAKPOINT, TABLETBREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const GridContainer = styled.div`
   display: grid;
@@ -55,7 +55,7 @@ const CardInfoText = styled.span`
   font-weight: 400;
   font-size: 25px;
   line-height: 40px;
-  color: ${LIGHT_PRIMARY_COLOR};
+  color: ${COLORS.LIGHT_PRIMARY};
 `;
 
 const CardInfoParagraph = styled.span`
@@ -88,7 +88,7 @@ const CardInfoHidden = styled.span`
 const Card = styled.div`
   position: relative;
   border-radius: 8px;
-  color: ${LIGHT_PRIMARY_COLOR};
+  color: ${COLORS.LIGHT_PRIMARY};
   text-align: center;
   height: 400px; /* Imposta un'altezza fissa o usa min-height */
   display: flex;

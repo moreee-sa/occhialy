@@ -6,7 +6,7 @@ import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
 import FilterCollection from "./components/FilterCollection";
 import Footer from "./components/Footer";
-import { MOBILEBREAKPOINT, TABLETBREAKPOINT, DARK_PRIMARY_COLOR, FONTS } from "./lib/constants";
+import { MOBILEBREAKPOINT, TABLETBREAKPOINT, COLORS , FONTS } from "./lib/constants";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -31,7 +31,7 @@ const TextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: ${DARK_PRIMARY_COLOR};
+  color: ${COLORS.DARK_PRIMARY};
   text-align: center;
   margin-bottom: 50px;
   @media only screen and (max-width: ${MOBILEBREAKPOINT}) {

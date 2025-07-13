@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { MOBILEBREAKPOINT, LIGHT_PRIMARY_COLOR, SECONDARY_TEXT_COLOR, FONTS } from "../lib/constants";
+import { MOBILEBREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
   display: flex;
@@ -45,7 +45,7 @@ const HeadingText = styled.div`
   font-weight: 400;
   font-size: 22px;
   line-height: 37px;
-  color: ${SECONDARY_TEXT_COLOR};
+  color: ${COLORS.SECONDARY_TEXT};
   @media (max-width: 999px) {
     width: 100%;
   }
@@ -99,7 +99,7 @@ const PrimaryTagline = styled.p`
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
-  color: ${LIGHT_PRIMARY_COLOR};
+  color: ${COLORS.LIGHT_PRIMARY};
   @media (max-width: 999px) {
     text-align: center;
   }
@@ -110,7 +110,7 @@ const SecondaryTagline = styled.p`
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  color: ${LIGHT_PRIMARY_COLOR};
+  color: ${COLORS.LIGHT_PRIMARY};
   margin-top: 20px;
 `;
 
