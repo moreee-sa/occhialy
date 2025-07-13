@@ -6,6 +6,7 @@ import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
 import FilterCollection from "./components/FilterCollection";
 import Footer from "./components/Footer";
+import { MOBILEBREAKPOINT, TABLETBREAKPOINT } from "./lib/constants";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -33,7 +34,7 @@ const TextWrapper = styled.div`
   color: #000000;
   text-align: center;
   margin-bottom: 50px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
     text-align: left;
     align-items: flex-start;
   }
@@ -47,12 +48,12 @@ const Tagline = styled.p`
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 400;
   
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: ${TABLETBREAKPOINT}) {
     font-size: 86px;
     line-height: 112px;
   }
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: ${TABLETBREAKPOINT}) {
     font-size: 38px;
     line-height: 50px;
   }
@@ -68,7 +69,7 @@ const SubTagline = styled.span`
   margin-top: 20px;
   font-size: 20px;
   line-height: 40px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${MOBILEBREAKPOINT}) {
     font-size: 16px;
     line-height: 33px;
   }

@@ -5,6 +5,7 @@ import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { SMALLMOBILEBREAKPOINT } from "../lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;
@@ -42,7 +43,7 @@ const LinksWrapper = styled.div`
   gap: 30px;
   width: 100%;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: ${SMALLMOBILEBREAKPOINT}) {
     display: none; /* Nascondi i link nella navbar quando diventa sidebar */
   }
 `;
@@ -57,7 +58,7 @@ const OtherLinkWrapper = styled.div`
   font-size: 22px;
   width: 100%;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: ${SMALLMOBILEBREAKPOINT}) {
     display: none;
   }
 `;
@@ -119,7 +120,7 @@ const HamburgerButton = styled.div`
   color: white;
   cursor: pointer;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: ${SMALLMOBILEBREAKPOINT}) {
     display: block; /* Mostra l'hamburger menu quando lo schermo è piccolo */
   }
 `;
