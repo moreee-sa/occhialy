@@ -7,7 +7,7 @@ import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
 
 const FooterWrapper = styled.div`
   height: 30vh;
-  background-color: #0a0a0a;
+  background-color: ${COLORS.FOOTER};
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
