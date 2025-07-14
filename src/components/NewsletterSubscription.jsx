@@ -12,6 +12,7 @@ const NewsletterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: ${COLORS.BACKGROUND_PRIMARY};
 
   padding: 0 80px 120px 80px;
   @media (max-width: 999px) {

@@ -10,7 +10,7 @@ import { SMALL_MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants
 const NavbarSticky = styled.div`
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 50;
 `;
 
 const NavbarWrapper = styled.div`

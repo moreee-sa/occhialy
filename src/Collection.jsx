@@ -11,6 +11,7 @@ import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS , FONTS } from "./lib/cons
 const CollectionWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
+  background-color: ${COLORS.BACKGROUND_PRIMARY};
 `;
 
 const Content = styled.div`

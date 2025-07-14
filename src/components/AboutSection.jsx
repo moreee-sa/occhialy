@@ -14,6 +14,8 @@ const AboutSectionWrapper = styled.div`
   margin: 380px 0 80px 0;
   box-sizing: border-box;
   padding: 0 80px;
+  z-index: 20;
+  
   @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     padding: 0;
   }

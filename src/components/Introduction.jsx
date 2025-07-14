@@ -10,6 +10,7 @@ const TextWrapperHeight = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   flex-wrap: wrap;
+  z-index: 20;
 `;
 
 const TextWrapper = styled.div`

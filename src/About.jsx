@@ -4,11 +4,13 @@ import AboutSection from "./components/AboutSection";
 import styled from "styled-components";
 import GetPageTitle from "./components/GetPageTitle";
 import Footer from "./components/Footer";
+import { COLORS } from "./lib/constants";
 
 const AboutWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+  background-color: ${COLORS.BACKGROUND_PRIMARY};
 `;
 
 const AboutHome = styled.div`

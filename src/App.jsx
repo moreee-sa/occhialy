@@ -8,6 +8,7 @@ import NewsletterSubscription from './components/NewsletterSubscription';
 import Footer from './components/Footer';
 import VideoBackground from "./components/VideoBackground";
 import GetPageTitle from './components/GetPageTitle';
+import { COLORS } from "./lib/constants";
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -20,6 +21,7 @@ const AppHome = styled.div`
   flex-direction: column;
   min-height: 100vh;
   padding: 0 80px;
+  background-color: ${COLORS.BACKGROUND_PRIMARY};
   @media (max-width: 999px) {
     padding: 0 20px;
   }
