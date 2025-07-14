@@ -19,7 +19,6 @@ const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background: ${(props) => (props.$scrolled ? COLORS.DARK_PRIMARY : "transparent")};
-  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
   transition: ${props => 
     props.$fade 
       ? "background 0.3s ease-in-out, opacity 2s ease-in-out" 
@@ -174,11 +173,9 @@ const SidebarBackground = styled.div`
   padding-top: 80px;
   transition: right 0.3s ease-in-out;
   z-index: 1;
-  /* background-color: red; */
 `;
 
 function Navbar({ isFading, isInverted }) {
-  const [isVisible, setIsVisible] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const colorMenu = scrolled ? COLORS.LIGHT_PRIMARY : isInverted ? COLORS.DARK_PRIMARY : COLORS.LIGHT_PRIMARY;
@@ -188,16 +185,12 @@ function Navbar({ isFading, isInverted }) {
       setScrolled(window.scrollY > 50);
     };
 
-    handleScroll(); // Controllo iniziale al primo render
+    handleScroll(); // inizializzazione
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  useEffect(() => {
-    setIsVisible(true);
   }, []);
 
   const links = [
@@ -210,7 +203,7 @@ function Navbar({ isFading, isInverted }) {
 
   return (
     <NavbarSticky>
-      <NavbarWrapper $isVisible={isVisible} $fade={isFading} $scrolled={scrolled}>
+      <NavbarWrapper $fade={isFading} $scrolled={scrolled}>
         {/* Desktop Links */}
         <LinksWrapper>
           {links
