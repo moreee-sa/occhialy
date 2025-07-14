@@ -18,3 +18,10 @@ export const FONTS = {
   NOTO_SANS: '"Noto Sans", sans-serif',
   LIBRE_BASKERVILLE: '"Libre Baskerville", sans-serif',
 };
+
+// Border Radius
+export const RADIUS = {
+  SMALL: "4px",
+  MEDIUM: "8px",
+  LARGE: "12px"
+};
