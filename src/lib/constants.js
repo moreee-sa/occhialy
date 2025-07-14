@@ -9,6 +9,7 @@ export const COLORS = {
   DARK_PRIMARY: "#000000",
   SECONDARY_TEXT: "#1d1d1f",
   BACKGROUND_PRIMARY: "#f8f9fa",
+  FOOTER: "#0a0a0a",
 };
 
 // Fonts
