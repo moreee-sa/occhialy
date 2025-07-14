@@ -11,17 +11,14 @@ const GridContainer = styled.div`
   
   @media only screen and (min-width: ${TABLET_BREAKPOINT}) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
   }
 
   @media only screen and (min-width: ${MOBILE_BREAKPOINT}) and (max-width: ${TABLET_BREAKPOINT}) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
   }
 
   @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
     grid-template-columns: repeat(1, 1fr);
-    gap: 35px;
   }
 `;
 
@@ -67,8 +64,7 @@ const CardInfoParagraph = styled.span`
 
 const Image = styled.img`
   width: 100%;
-  height: 100%;
-  border-radius: ${RADIUS.MEDIUM};
+  border-radius: ${RADIUS.LARGE};
   object-fit: cover;
 `;
 
@@ -85,7 +81,7 @@ const CardInfoHidden = styled.span`
 
 const Card = styled.div`
   position: relative;
-  border-radius: ${RADIUS.MEDIUM};
+  border-radius: ${RADIUS.LARGE};
   color: ${COLORS.LIGHT_PRIMARY};
   text-align: center;
   height: 400px; /* Imposta un'altezza fissa o usa min-height */

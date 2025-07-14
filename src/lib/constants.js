@@ -23,5 +23,5 @@ export const FONTS = {
 export const RADIUS = {
   SMALL: "4px",
   MEDIUM: "8px",
-  LARGE: "12px"
+  LARGE: "20px"
 };
