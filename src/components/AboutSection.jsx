@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
   display: flex;
@@ -75,7 +75,7 @@ const ImageColumn = styled.div`
 const StyledImage = styled.img`
   width: 100%;
   max-height: 60vh;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
   object-fit: cover;
   object-position: center;
 
@@ -91,7 +91,6 @@ const TaglineWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: blue; */
 `;
 
 const PrimaryTagline = styled.p`

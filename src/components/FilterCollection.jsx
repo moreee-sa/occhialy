@@ -2,12 +2,12 @@ import { useState } from "react";
 import CardsCollection from "./CardsCollection"
 import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
-import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const FilterContainer = styled.div`
   margin-bottom: 25px;
   padding: 10px 0;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
 `;
 
 const FilterWrapper = styled.div`
@@ -31,7 +31,7 @@ const gradient = keyframes`
 const FilterBox = styled.div`
   width: 160px;
   height: 46px;
-  border-radius: 4px;
+  border-radius: ${RADIUS.SMALL};
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;

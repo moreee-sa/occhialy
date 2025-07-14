@@ -15,7 +15,6 @@ const ShowcaseWrapper = styled.div`
 
 const TextWrapper = styled.div`
   padding: 80px 0 60px 0;
-  /* background-color: blue; */
 
   @media (max-width: 999px) {
     padding: 25px 0 60px 0;

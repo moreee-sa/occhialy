@@ -5,7 +5,7 @@ import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { SMALL_MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { SMALL_MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;
@@ -81,7 +81,7 @@ const ContactButton = styled.button`
   background-color: ${(props) => (props.$scrolled ? "#ced4da" : COLORS.DARK_PRIMARY)};
   color: ${(props) => (props.$scrolled ? COLORS.DARK_PRIMARY : COLORS.LIGHT_PRIMARY)};
   border: none;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
   font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
   font-size: 15px;
@@ -100,7 +100,7 @@ const GithubButton = styled.button`
   background-color: ${(props) => (props.$scrolled ? "#ced4da" : COLORS.DARK_PRIMARY)};
   color: ${(props) => (props.$scrolled ? COLORS.DARK_PRIMARY : COLORS.LIGHT_PRIMARY)};
   border: none;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
   font-size: 15px;
   height: 40px;
   width: 40px;

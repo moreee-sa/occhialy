@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
-import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const GridContainer = styled.div`
   display: grid;
@@ -27,10 +27,9 @@ const GridContainer = styled.div`
 
 const CardShadowInset = styled.div`
   position: absolute;
-  /* background-color: #ad952a52; */
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: ${RADIUS.LARGE};
   transition: box-shadow 0.3s ease-in-out;
 `;
 
@@ -38,7 +37,6 @@ const CardInfo = styled.div`
   position: absolute;
   width: 80%;
   height: 80%;
-  /* background-color: #87879e8f; */
   display: flex;
   justify-content: flex-end;
   align-items: start;
@@ -70,7 +68,7 @@ const CardInfoParagraph = styled.span`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
   object-fit: cover;
 `;
 
@@ -87,7 +85,7 @@ const CardInfoHidden = styled.span`
 
 const Card = styled.div`
   position: relative;
-  border-radius: 8px;
+  border-radius: ${RADIUS.MEDIUM};
   color: ${COLORS.LIGHT_PRIMARY};
   text-align: center;
   height: 400px; /* Imposta un'altezza fissa o usa min-height */

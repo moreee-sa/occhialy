@@ -4,10 +4,9 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { COLORS, FONTS } from "../lib/constants";
+import { COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const NewsletterWrapper = styled.div`
-  /* background-color: blue; */
   height: 40vh;
   display: flex;
   justify-content: center;
@@ -22,7 +21,7 @@ const NewsletterWrapper = styled.div`
 
 const FormData = styled.form`
   min-width: 40%;
-  border-radius: 9px;
+  border-radius: ${RADIUS.MEDIUM};
   padding: 6px;
   display: flex;
   justify-content: space-between;
@@ -42,7 +41,7 @@ const FormData = styled.form`
 const SendButton = styled.button`
   background-color: black;
   border: none;
-  border-radius: 8px;
+  ${RADIUS.MEDIUM};
   color: ${COLORS.LIGHT_PRIMARY};
   font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
@@ -64,7 +63,6 @@ const EmailInput = styled.input`
 
 const TextWrapper = styled.div`
   max-width: 60%;
-  /* background-color: blue; */
   text-align: center;
   margin: 60px 0;
 `;
