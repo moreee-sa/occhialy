@@ -4,9 +4,6 @@ export const MOBILE_BREAKPOINT = "767px";
 export const TABLET_BREAKPOINT = "960px";
 
 // Colors
-export const DARK_PRIMARY_COLOR = "#000000";
-export const SECONDARY_TEXT_COLOR = "#1d1d1f";
-
 export const COLORS = {
   LIGHT_PRIMARY: "#ffffffff",
   DARK_PRIMARY: "#000000",
