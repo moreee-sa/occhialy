@@ -188,9 +188,18 @@ function Navbar({ isFading, isInverted }) {
     handleScroll(); // inizializzazione
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > parseInt(SMALL_MOBILE_BREAKPOINT)) {
+        setSidebarOpen(false);
+      }
     };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const links = [
