@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { MOBILE_BREAKPOINT, COLORS, FONTS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
 
 const FooterWrapper = styled.div`
   height: 30vh;
@@ -15,7 +15,7 @@ const FooterWrapper = styled.div`
   box-sizing: border-box;
   justify-items: center;
   padding: 40px 80px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 40px 20px;
   }
 `;
@@ -29,7 +29,7 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
     font-size: 15px;
     line-height: 25px;
   }

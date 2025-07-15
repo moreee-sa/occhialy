@@ -5,7 +5,7 @@ import "@fontsource/noto-sans/600.css";
 import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { SMALL_MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
+import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "../lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;
@@ -26,7 +26,7 @@ const NavbarWrapper = styled.div`
   z-index: 5;
 
   padding: 0 80px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 0 20px;
   }
 `;
@@ -42,7 +42,7 @@ const LinksWrapper = styled.div`
   gap: 30px;
   width: 100%;
 
-  @media only screen and (max-width: ${SMALL_MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.SMALL_MOBILE}) {
     display: none; /* Nascondi i link nella navbar quando diventa sidebar */
   }
 `;
@@ -57,7 +57,7 @@ const OtherLinkWrapper = styled.div`
   font-size: 22px;
   width: 100%;
 
-  @media only screen and (max-width: ${SMALL_MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.SMALL_MOBILE}) {
     display: none;
   }
 `;
@@ -119,7 +119,7 @@ const HamburgerButton = styled.div`
   color: ${COLORS.LIGHT_PRIMARY};
   cursor: pointer;
 
-  @media only screen and (max-width: ${SMALL_MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.SMALL_MOBILE}) {
     display: block; /* Mostra l'hamburger menu quando lo schermo è piccolo */
   }
 `;
@@ -193,7 +193,7 @@ function Navbar({ isFading, isInverted }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > parseInt(SMALL_MOBILE_BREAKPOINT)) {
+      if (window.innerWidth > parseInt(BREAKPOINTS.SMALL_MOBILE)) {
         setSidebarOpen(false);
       }
     };

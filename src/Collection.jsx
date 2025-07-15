@@ -6,7 +6,7 @@ import LoremIpsum from "react-lorem-ipsum";
 import GetPageTitle from "./components/GetPageTitle";
 import FilterCollection from "./components/FilterCollection";
 import Footer from "./components/Footer";
-import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS , FONTS } from "./lib/constants";
+import { COLORS , FONTS, BREAKPOINTS } from "./lib/constants";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -20,7 +20,7 @@ const Content = styled.div`
   height: 65%;
   padding: 80px 80px;
   margin-top: 50px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 20px 20px;
   }
 `;
@@ -35,7 +35,7 @@ const TextWrapper = styled.div`
   color: ${COLORS.DARK_PRIMARY};
   text-align: center;
   margin-bottom: 50px;
-  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
     text-align: left;
     align-items: flex-start;
   }
@@ -49,12 +49,12 @@ const Tagline = styled.p`
   font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   
-  @media only screen and (min-width: ${TABLET_BREAKPOINT}) {
+  @media (min-width: ${BREAKPOINTS.DESKTOP}) {
     font-size: 86px;
     line-height: 112px;
   }
 
-  @media only screen and (max-width: ${TABLET_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     font-size: 38px;
     line-height: 50px;
   }
@@ -70,7 +70,7 @@ const SubTagline = styled.span`
   margin-top: 20px;
   font-size: 20px;
   line-height: 40px;
-  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
     font-size: 16px;
     line-height: 33px;
   }

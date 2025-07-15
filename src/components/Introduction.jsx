@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
-import { COLORS, FONTS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
 
 const TextWrapperHeight = styled.div`
   height: 80vh;
@@ -20,7 +20,7 @@ const TextWrapper = styled.div`
   align-items: center;
   flex-direction: row;
 
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     flex-direction: column;
   }
 `;
@@ -39,7 +39,7 @@ const RightTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     display: none;
   }
 `;
@@ -54,7 +54,7 @@ const TextIntro = styled.span`
 
 const TextContainer = styled.div`
   width: 50%;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     width: auto;
     text-align: center;
   }
@@ -75,7 +75,7 @@ const TextLimited = styled.span`
   line-height: 37px;
   color: ${COLORS.LIGHT_PRIMARY};
   display: none;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     display: block;
   }
 `;

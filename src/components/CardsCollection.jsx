@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
-import { MOBILE_BREAKPOINT, TABLET_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const GridContainer = styled.div`
   display: grid;
@@ -9,15 +9,15 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   
-  @media only screen and (min-width: ${TABLET_BREAKPOINT}) {
+  @media (min-width: ${BREAKPOINTS.DESKTOP}) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media only screen and (min-width: ${MOBILE_BREAKPOINT}) and (max-width: ${TABLET_BREAKPOINT}) {
+  @media (min-width: ${BREAKPOINTS.MOBILE}) and (max-width: ${BREAKPOINTS.DESKTOP}) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -40,7 +40,7 @@ const CardInfo = styled.div`
   flex-direction: column;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${BREAKPOINTS.LARGE_DESKTOP}) {
     width: 90%;
   }
 `;

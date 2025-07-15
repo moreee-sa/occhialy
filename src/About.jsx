@@ -4,7 +4,7 @@ import AboutSection from "./components/AboutSection";
 import styled from "styled-components";
 import GetPageTitle from "./components/GetPageTitle";
 import Footer from "./components/Footer";
-import { COLORS } from "./lib/constants";
+import { COLORS, BREAKPOINTS } from "./lib/constants";
 
 const AboutWrapper = styled.div`
   width: 100%;
@@ -18,7 +18,7 @@ const AboutHome = styled.div`
   flex-direction: column;
   min-height: 100vh;
   padding: 0 80px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 0 20px;
   }
 `;

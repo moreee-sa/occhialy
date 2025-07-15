@@ -4,7 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { MOBILE_BREAKPOINT, COLORS, FONTS, RADIUS } from "../lib/constants";
+import { BREAKPOINTS , COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const AboutSectionWrapper = styled.div`
   padding: 0 80px;
   z-index: 20;
   
-  @media only screen and (max-width: ${MOBILE_BREAKPOINT}) {
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
     padding: 0;
   }
 `;
@@ -24,7 +24,7 @@ const AboutSectionWrapper = styled.div`
 const ContentRow = styled.div`
   margin-top: 120px;
   display: flex;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     flex-direction: column;
   }
   gap: 25px;
@@ -36,7 +36,7 @@ const TextColumn = styled.div`
   flex-direction: column;
   align-items: flex-end;
   gap: 30px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     align-items: center;
   }
 `;
@@ -48,7 +48,7 @@ const HeadingText = styled.div`
   font-size: 22px;
   line-height: 37px;
   color: ${COLORS.SECONDARY_TEXT};
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     width: 100%;
   }
 `;
@@ -60,7 +60,7 @@ const BodyText = styled.span`
   font-size: 17px;
   line-height: 29px;
   color: #262626;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     width: 100%;
   }
 `;
@@ -69,7 +69,7 @@ const ImageColumn = styled.div`
   width: 100%;
   display: flex;
   justify-content: left;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     justify-content: center;
   }
 `;
@@ -81,7 +81,7 @@ const StyledImage = styled.img`
   object-fit: cover;
   object-position: center;
 
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     max-height: 50vh;
   }
 `;
@@ -101,7 +101,7 @@ const PrimaryTagline = styled.p`
   font-size: 25px;
   line-height: 38px;
   color: ${COLORS.LIGHT_PRIMARY};
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     text-align: center;
   }
 `;

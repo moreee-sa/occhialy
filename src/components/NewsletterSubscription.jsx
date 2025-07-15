@@ -4,7 +4,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { COLORS, FONTS, RADIUS } from "../lib/constants";
+import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "../lib/constants";
 
 const NewsletterWrapper = styled.div`
   height: 40vh;
@@ -15,7 +15,7 @@ const NewsletterWrapper = styled.div`
   background-color: ${COLORS.BACKGROUND_PRIMARY};
 
   padding: 0 80px 120px 80px;
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 0 20px 60px 20px;
   }
 `;
@@ -34,7 +34,7 @@ const FormData = styled.form`
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 999px) {
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     min-width: 60%;
   }
 `;
