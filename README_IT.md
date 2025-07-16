@@ -54,3 +54,7 @@ Per eseguire il progetto localmente:
 ## 📌 Credis
 - I video di sfondo sono stati presi da [Pexels](https://www.pexels.com/).
 - Le immagini sono state generate tramite intelligenza artificiale (es. Leonardo AI, Microsoft Designer).
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).  
+© 2025 moreee-sa

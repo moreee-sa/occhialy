@@ -62,3 +62,7 @@ To run the project locally:
 ## 📌 Credits
 - The background videos were sourced from [Pexels](https://www.pexels.com/).
 - The images were generated through artificial intelligence (e.g., Leonardo AI, Microsoft Designer).
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).  
+© 2025 moreee-sa
