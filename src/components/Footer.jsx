@@ -6,6 +6,7 @@ import "@fontsource/noto-sans/600.css";
 import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
 
 const FooterWrapper = styled.div`
+  position: relative;
   height: 30vh;
   background-color: ${COLORS.FOOTER};
   display: grid;
@@ -18,6 +19,7 @@ const FooterWrapper = styled.div`
   @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     padding: 40px 20px;
   }
+  z-index: 30;
 `;
 
 const LogoWrapper = styled.div`
@@ -71,27 +73,25 @@ const socialLinks = [
 
 function Footer() {
   return (
-    <>
-      <FooterWrapper>
-        <LogoWrapper>
-          Impegnati nell'arte, non nei riflettori sociali.
-        </LogoWrapper>
-        <SocialWrapper>
-          {socialLinks.map((item) => (
-            <SocialLink
-              key={item.id}
-              href="https://github.com/moreee-sa/occhialy"
-              target="blank"
-            >
-              {item.name}
-            </SocialLink>
-          ))}
-        </SocialWrapper>
-        <Rights>
-          © 2025 moreee-sa – Questo sito è stato creato con passione 💙
-        </Rights>
-      </FooterWrapper>
-    </>
+    <FooterWrapper>
+      <LogoWrapper>
+        Impegnati nell'arte, non nei riflettori sociali.
+      </LogoWrapper>
+      <SocialWrapper>
+        {socialLinks.map((item) => (
+          <SocialLink
+            key={item.id}
+            href="https://github.com/moreee-sa/occhialy"
+            target="blank"
+          >
+            {item.name}
+          </SocialLink>
+        ))}
+      </SocialWrapper>
+      <Rights>
+        © 2025 moreee-sa – Questo sito è stato creato con passione 💙
+      </Rights>
+    </FooterWrapper>
   )
 }
 

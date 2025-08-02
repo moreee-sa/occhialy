@@ -1,28 +1,27 @@
 import styled from "styled-components"
 import '@fontsource/libre-baskerville';
-import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
-import "@fontsource/noto-sans/600.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
 import { BREAKPOINTS , COLORS, FONTS, RADIUS } from "../lib/constants";
 
 const AboutSectionWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 380px 0 80px 0;
+  margin: 0 0 80px 0;
   box-sizing: border-box;
   padding: 0 80px;
   z-index: 20;
   
-  @media (max-width: ${BREAKPOINTS.MOBILE}) {
-    padding: 0;
+  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
+    padding: 0 20px;
   }
 `;
 
 const ContentRow = styled.div`
-  margin-top: 120px;
+  margin-top: 80px;
   display: flex;
   @media (max-width: ${BREAKPOINTS.DESKTOP}) {
     flex-direction: column;
@@ -86,49 +85,16 @@ const StyledImage = styled.img`
   }
 `;
 
-const TaglineWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const PrimaryTagline = styled.p`
-  font-family: ${FONTS.LIBRE_BASKERVILLE};
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 38px;
-  color: ${COLORS.LIGHT_PRIMARY};
-  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
-    text-align: center;
-  }
-`;
-
-const SecondaryTagline = styled.p`
-  font-family: ${FONTS.NOTO_SANS};
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: ${COLORS.LIGHT_PRIMARY};
-  margin-top: 20px;
-`;
-
 function AboutSection() {
   return (
     <AboutSectionWrapper>
-      <TaglineWrapper>
-        <PrimaryTagline>Ideato per accompagnarti ogni giorno.</PrimaryTagline>
-        <SecondaryTagline>Progettato per resistere nel tempo.</SecondaryTagline>
-      </TaglineWrapper>
       <ContentRow>
         <TextColumn>
           <HeadingText>
             Occhialy propone occhiali esclusivi, realizzati con materiali di alta qualità e progettati per chi cerca eleganza e originalità.
           </HeadingText>
           <BodyText>
-            <LoremIpsum p={2} />
+            <LoremIpsum />
           </BodyText>
         </TextColumn>
         <ImageColumn>

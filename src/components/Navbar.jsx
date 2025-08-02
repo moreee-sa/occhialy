@@ -182,7 +182,7 @@ function Navbar({ isFading, isInverted }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 10);
     };
 
     handleScroll(); // inizializzazione
