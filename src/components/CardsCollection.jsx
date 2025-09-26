@@ -6,19 +6,21 @@ import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
 const GridContainer = styled.div`
   display: grid;
   gap: 15px;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  
+
   @media (min-width: ${BREAKPOINTS.DESKTOP}) {
     grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: ${BREAKPOINTS.MOBILE}) and (max-width: ${BREAKPOINTS.DESKTOP}) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   @media (max-width: ${BREAKPOINTS.MOBILE}) {
     grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
   }
 `;
 
@@ -26,14 +28,15 @@ const CardShadowInset = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: ${RADIUS.LARGE};
+  border-radius: ${RADIUS.MEDIUM};
   transition: box-shadow 0.3s ease-in-out;
+  box-shadow: inset 0px -180px 90px -15px rgba(0,0,0,0.35);
 `;
 
 const CardInfo = styled.div`
   position: absolute;
-  width: 80%;
-  height: 80%;
+  height: 100%;
+  padding: 25px;
   display: flex;
   justify-content: flex-end;
   align-items: start;
@@ -41,14 +44,14 @@ const CardInfo = styled.div`
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: ${BREAKPOINTS.LARGE_DESKTOP}) {
-    width: 90%;
+    padding: 20px
   }
 `;
 
 const CardInfoText = styled.span`
   font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 40px;
   color: ${COLORS.LIGHT_PRIMARY};
 `;
@@ -64,15 +67,20 @@ const CardInfoParagraph = styled.span`
 
 const Image = styled.img`
   width: 100%;
-  border-radius: ${RADIUS.LARGE};
+  border-radius: ${RADIUS.MEDIUM};
   object-fit: cover;
+  height: 300px;
+
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
+    height: 200px;
+  }
 `;
 
 const CardInfoHidden = styled.span`
   font-family: ${FONTS.LIBRE_BASKERVILLE};
   font-weight: 400;
   font-size: 13px;
-  color: #ccc;
+  color: #a1a1a1;
   text-align: left;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -81,23 +89,24 @@ const CardInfoHidden = styled.span`
 
 const Card = styled.div`
   position: relative;
-  border-radius: ${RADIUS.LARGE};
+  border-radius: ${RADIUS.MEDIUM};
   color: ${COLORS.LIGHT_PRIMARY};
   text-align: center;
-  height: 400px; /* Imposta un'altezza fissa o usa min-height */
+  width: 100%;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-  &:hover{
-    transform: translateY(-15px);
+  &:hover {
+    transform: translateY(-8px);
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
   }
 
   &:hover ${CardInfo} {
-    transform: translateY(-20px); /* Solleva solo il testo */
+    transform: translateY(-20px);
   }
 
   &:hover ${CardInfoHidden} {
@@ -105,7 +114,11 @@ const Card = styled.div`
   }
 
   &:hover ${CardShadowInset} {
-    box-shadow: inset 0px -180px 90px -15px rgba(0,0,0,0.35);
+    box-shadow: inset 0px -180px 90px -15px rgba(0,0,0,0.65);
+  }
+
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
+    height: 200px;
   }
 `;
 
@@ -129,7 +142,7 @@ function CardsCollection({ color, stock, limit }) {
             <CardInfoParagraph>{item.info}</CardInfoParagraph>
             <CardInfoHidden>{item.color} - {item.availability}</CardInfoHidden>
           </CardInfo>
-          <Image src={item.imageUrl} style={{ height: "400px" }} />
+          <Image src={item.imageUrl} />
         </Card>
       ))}
     </GridContainer>
