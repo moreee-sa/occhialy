@@ -4,6 +4,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
+import { FaInstagram, FaXTwitter, FaYoutube, FaTiktok } from "react-icons/fa6";
 
 const FooterWrapper = styled.div`
   position: relative;
@@ -62,13 +63,15 @@ const SocialLink = styled.a`
   line-height: 14px;
   color: ${COLORS.LIGHT_PRIMARY};
   text-decoration: underline;
+  display: flex;
+  gap: 5px;
 `;
 
 const socialLinks = [
-  { id: 0, name: "Instagram", path: "/" },
-  { id: 1, name: "X/Twitter", path: "/collection" },
-  { id: 2, name: "Youtube", path: "/about" },
-  { id: 3, name: "TikTok", path: "/contact" },
+  { id: 0, name: "Instagram", path: "/", icon: <FaInstagram /> },
+  { id: 1, name: "X/Twitter", path: "/collection", icon: <FaXTwitter /> },
+  { id: 2, name: "Youtube", path: "/about", icon: <FaYoutube /> },
+  { id: 3, name: "TikTok", path: "/contact", icon: <FaTiktok /> },
 ];
 
 function Footer() {
@@ -84,6 +87,7 @@ function Footer() {
             href="https://github.com/moreee-sa/occhialy"
             target="blank"
           >
+            {item.icon && item.icon}
             {item.name}
           </SocialLink>
         ))}
