@@ -42,7 +42,7 @@ const FormData = styled.form`
 const SendButton = styled.button`
   background-color: black;
   border: none;
-  ${RADIUS.MEDIUM};
+  border-radius: ${RADIUS.MEDIUM};
   color: ${COLORS.LIGHT_PRIMARY};
   font-family: ${FONTS.NOTO_SANS};
   font-weight: 500;
