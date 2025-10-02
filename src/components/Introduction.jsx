@@ -3,6 +3,7 @@ import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
 import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
+import BlurText from './BlurText';
 
 const TextWrapperHeight = styled.div`
   height: 80vh;
@@ -26,7 +27,8 @@ const LeftTextWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 `;
 
 const RightTextWrapper = styled.div`
@@ -84,7 +86,12 @@ function Introduction() {
         <LeftTextWrapper>
           <TextContainer>
             <TextIntro>
-              Lancio della collezione 2025
+              <BlurText
+                text="Lancio della collezione 2025"
+                delay={150}
+                animateBy="words"
+                direction="top"
+              />
             </TextIntro>
           </TextContainer>
         </LeftTextWrapper>
