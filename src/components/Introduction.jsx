@@ -18,11 +18,7 @@ const TextWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-
-  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 `;
 
 const LeftTextWrapper = styled.div`
@@ -53,11 +49,8 @@ const TextIntro = styled.span`
 `;
 
 const TextContainer = styled.div`
-  width: 50%;
-  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
-    width: auto;
-    text-align: center;
-  }
+  width: auto;
+  text-align: center;
 `;
 
 const TextP = styled.span`
