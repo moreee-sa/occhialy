@@ -98,7 +98,7 @@ function AboutSection() {
           </BodyText>
         </TextColumn>
         <ImageColumn>
-          <StyledImage src="./image/case/case1.png" />
+          <StyledImage src="./image/case/case1.webp" />
         </ImageColumn>
       </ContentRow>
     </AboutSectionWrapper>
