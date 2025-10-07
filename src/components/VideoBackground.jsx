@@ -18,8 +18,8 @@ function VideoBackground({ height }) {
 
   function getVideoSource() {
     return window.innerWidth > 768
-      ? "./assets/background_desktop.mp4"
-      : "./assets/background_mobile2.mp4";
+      ? "./assets/background_desktop.webm"
+      : "./assets/background_mobile.webm";
   }
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function VideoBackground({ height }) {
 
   return (
     <Video $height={`${height}%`} ref={videoRef} autoPlay loop muted>
-      <source src={videoSrc} type='video/mp4' />
+      <source src={videoSrc} type='video/webm' />
         Il tuo browser non supporta il video tag.
     </Video>
   )

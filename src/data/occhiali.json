@@ -4,7 +4,7 @@
     "nome": "Nero Lucente",
     "info": "Un design audace che evoca eleganza e forza.",
     "path": "/1",
-    "imageUrl": "./image/glasses/glasses4.png",
+    "imageUrl": "./image/glasses/glasses4.webp",
     "color": "black",
     "availability": "Stock"
   },
@@ -13,7 +13,7 @@
     "nome": "Oro Luminoso",
     "info": "L'unione perfetta di stile raffinato e modernità.",
     "path": "/2",
-    "imageUrl": "./image/glasses/glasses2.png",
+    "imageUrl": "./image/glasses/glasses2.webp",
     "color": "gold",
     "availability": "Stock"
   },
@@ -22,7 +22,7 @@
     "nome": "Titanio Raffinato",
     "info": "Una fusione di tecnologia avanzata e design futuristico.",
     "path": "/3",
-    "imageUrl": "./image/glasses/glasses1.png",
+    "imageUrl": "./image/glasses/glasses1.webp",
     "color": "silver",
     "availability": "Stock"
   },
@@ -31,7 +31,7 @@
     "nome": "Vetro Cristallino",
     "info": "Semplicità sofisticata con una visione chiara e pura.",
     "path": "/4",
-    "imageUrl": "./image/glasses/glasses3.png",
+    "imageUrl": "./image/glasses/glasses3.webp",
     "color": "white",
     "availability": "Stock"
   },
@@ -40,7 +40,7 @@
     "nome": "Nero Opaco",
     "info": "Un design moderno con un tocco di mistero.",
     "path": "/5",
-    "imageUrl": "./image/glasses/glasses4.png",
+    "imageUrl": "./image/glasses/glasses4.webp",
     "color": "black",
     "availability": "Out of Stock"
   },
@@ -49,7 +49,7 @@
     "nome": "Oro Brillante",
     "info": "Un design che cattura la luce e l'attenzione.",
     "path": "/6",
-    "imageUrl": "./image/glasses/glasses2.png",
+    "imageUrl": "./image/glasses/glasses2.webp",
     "color": "gold",
     "availability": "Stock"
   },
@@ -58,7 +58,7 @@
     "nome": "Argento Satinato",
     "info": "Un design elegante e senza tempo.",
     "path": "/7",
-    "imageUrl": "./image/glasses/glasses1.png",
+    "imageUrl": "./image/glasses/glasses1.webp",
     "color": "silver",
     "availability": "Out of Stock"
   },
@@ -67,7 +67,7 @@
     "nome": "Bianco Perla",
     "info": "Un design puro e sofisticato.",
     "path": "/8",
-    "imageUrl": "./image/glasses/glasses3.png",
+    "imageUrl": "./image/glasses/glasses3.webp",
     "color": "white",
     "availability": "Stock"
   },
@@ -76,7 +76,7 @@
     "nome": "Nero Classico",
     "info": "Un design intramontabile per ogni occasione.",
     "path": "/9",
-    "imageUrl": "./image/glasses/glasses4.png",
+    "imageUrl": "./image/glasses/glasses4.webp",
     "color": "black",
     "availability": "Out of Stock"
   },
@@ -85,7 +85,7 @@
     "nome": "Oro Antico",
     "info": "Un design che unisce tradizione e modernità.",
     "path": "/10",
-    "imageUrl": "./image/glasses/glasses2.png",
+    "imageUrl": "./image/glasses/glasses2.webp",
     "color": "gold",
     "availability": "Stock"
   },
@@ -94,7 +94,7 @@
     "nome": "Argento Lucido",
     "info": "Un design brillante per uno stile unico.",
     "path": "/11",
-    "imageUrl": "./image/glasses/glasses1.png",
+    "imageUrl": "./image/glasses/glasses1.webp",
     "color": "silver",
     "availability": "Out of Stock"
   },
@@ -103,7 +103,7 @@
     "nome": "Bianco Ghiaccio",
     "info": "Un design fresco e moderno.",
     "path": "/12",
-    "imageUrl": "./image/glasses/glasses3.png",
+    "imageUrl": "./image/glasses/glasses3.webp",
     "color": "white",
     "availability": "Stock"
   }
