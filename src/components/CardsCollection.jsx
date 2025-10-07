@@ -142,7 +142,7 @@ function CardsCollection({ color, stock, limit }) {
             <CardInfoParagraph>{item.info}</CardInfoParagraph>
             <CardInfoHidden>{item.color} - {item.availability}</CardInfoHidden>
           </CardInfo>
-          <Image src={item.imageUrl} />
+          <Image src={item.imageUrl} alt={item.info} />
         </Card>
       ))}
     </GridContainer>
