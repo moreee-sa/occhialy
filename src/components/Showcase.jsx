@@ -4,6 +4,7 @@ import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import CardsCollection from "./CardsCollection";
 import { COLORS, FONTS, BREAKPOINTS} from "../lib/constants";
+import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const ShowcaseWrapper = styled.div`
   background-color: #ededed;
@@ -56,12 +57,16 @@ function Collection() {
   return (
     <ShowcaseWrapper>
       <TextWrapper>
-        <TextShowcaseWrapper>
-          <TextCollection>La collezione 2025</TextCollection>
-        </TextShowcaseWrapper>
-        <TextShowcaseWrapper>
-          <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
-        </TextShowcaseWrapper>
+        <FadeInWhenVisible delay={0.1}>
+          <TextShowcaseWrapper>
+            <TextCollection>La collezione 2025</TextCollection>
+          </TextShowcaseWrapper>
+        </FadeInWhenVisible>
+        <FadeInWhenVisible delay={0.2}>
+          <TextShowcaseWrapper>
+            <TextInfoCollection>Ogni occhiale che realizziamo racconta una storia, dalla concezione alla creazione.</TextInfoCollection>
+          </TextShowcaseWrapper>
+        </FadeInWhenVisible>
       </TextWrapper>
       <CardsCollection color="all" stock={false} limit={4} />
     </ShowcaseWrapper>

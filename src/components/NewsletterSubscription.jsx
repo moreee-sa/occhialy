@@ -5,6 +5,7 @@ import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "../lib/constants";
+import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const NewsletterWrapper = styled.div`
   height: 40vh;
@@ -21,7 +22,7 @@ const NewsletterWrapper = styled.div`
 `;
 
 const FormData = styled.form`
-  min-width: 40%;
+  min-width: 50vh;
   border-radius: ${RADIUS.MEDIUM};
   padding: 6px;
   display: flex;
@@ -30,12 +31,12 @@ const FormData = styled.form`
   transition: box-shadow 0.3s ease;
   background-color: ${COLORS.LIGHT_PRIMARY};
 
-  &:focus-within {
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  @media (max-width: ${BREAKPOINTS.MOBILE}) {
+    min-width: 20vh;
   }
 
-  @media (max-width: ${BREAKPOINTS.DESKTOP}) {
-    min-width: 60%;
+  &:focus-within {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -96,23 +97,27 @@ function NewsletterSubscription() {
 
   return (
     <NewsletterWrapper>
-      <TextWrapper>
-        <Text>
-          Tieniti informato e non perderti niente.
-        </Text>
-      </TextWrapper>
-      <FormData onSubmit={handleSubmit}>
-        <EmailInput
-          type="email"
-          name="email"
-          id="email"
-          placeholder={sent? "Email inviata" : "Inserisci la tua email"}
-          required
-          value={email}
-          onChange={handleChange}
-        />
-        <SendButton type="submit">Invia</SendButton>
-      </FormData>
+        <TextWrapper>
+          <FadeInWhenVisible delay={0.1}>
+            <Text>
+              Tieniti informato e non perderti niente.
+            </Text>
+          </FadeInWhenVisible>
+        </TextWrapper>
+      <FadeInWhenVisible delay={0.2} centered >
+        <FormData onSubmit={handleSubmit}>
+          <EmailInput
+            type="email"
+            name="email"
+            id="email"
+            placeholder={sent? "Email inviata" : "Inserisci la tua email"}
+            required
+            value={email}
+            onChange={handleChange}
+            />
+          <SendButton type="submit">Invia</SendButton>
+        </FormData>
+      </FadeInWhenVisible>
     </NewsletterWrapper>
   )
 }

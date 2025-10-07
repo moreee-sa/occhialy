@@ -2,6 +2,7 @@ import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import occhiali from "../data/occhiali.json";
 import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
+import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const GridContainer = styled.div`
   display: grid;
@@ -135,15 +136,17 @@ function CardsCollection({ color, stock, limit }) {
   return (
     <GridContainer>
       {displayedOcchiali.map((item) => (
-        <Card key={item.id}>
-          <CardShadowInset />
-          <CardInfo>
-            <CardInfoText>{item.nome}</CardInfoText>
-            <CardInfoParagraph>{item.info}</CardInfoParagraph>
-            <CardInfoHidden>{item.color} - {item.availability}</CardInfoHidden>
-          </CardInfo>
-          <Image src={item.imageUrl} alt={item.info} />
-        </Card>
+        <FadeInWhenVisible delay={0.1} key={item.id}>
+          <Card>
+            <CardShadowInset />
+            <CardInfo>
+              <CardInfoText>{item.nome}</CardInfoText>
+              <CardInfoParagraph>{item.info}</CardInfoParagraph>
+              <CardInfoHidden>{item.color} - {item.availability}</CardInfoHidden>
+            </CardInfo>
+            <Image src={item.imageUrl} alt={item.info} />
+          </Card>
+        </FadeInWhenVisible>
       ))}
     </GridContainer>
   );
