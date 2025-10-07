@@ -88,7 +88,7 @@ function Introduction() {
             <TextIntro>
               <BlurText
                 text="Lancio della collezione 2025"
-                delay={150}
+                delay={60}
                 animateBy="words"
                 direction="top"
               />
