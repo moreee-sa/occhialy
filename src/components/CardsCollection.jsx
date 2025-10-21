@@ -43,6 +43,7 @@ const CardInfo = styled.div`
   align-items: start;
   flex-direction: column;
   transition: transform 0.3s ease-in-out;
+  width: 80%;
 
   @media (max-width: ${BREAKPOINTS.LARGE_DESKTOP}) {
     padding: 20px
