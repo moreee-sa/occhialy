@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
-import { BREAKPOINTS , COLORS, FONTS } from "../lib/constants";
+import { BREAKPOINTS , COLORS, FONTS } from "@lib/constants";
 
 const PrimaryTagline = styled.p`
   font-family: ${FONTS.LIBRE_BASKERVILLE};

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
-import occhiali from "../data/occhiali.json";
-import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import occhiali from "@data/occhiali.json";
+import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "@lib/constants";
+import FadeInWhenVisible from "@components/motion/FadeInWhenVisible";
 
 const GridContainer = styled.div`
   display: grid;
@@ -43,6 +43,7 @@ const CardInfo = styled.div`
   align-items: start;
   flex-direction: column;
   transition: transform 0.3s ease-in-out;
+  width: 80%;
 
   @media (max-width: ${BREAKPOINTS.LARGE_DESKTOP}) {
     padding: 20px

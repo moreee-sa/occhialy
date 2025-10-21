@@ -2,9 +2,9 @@ import styled from "styled-components";
 import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import CardsCollection from "./CardsCollection";
-import { COLORS, FONTS, BREAKPOINTS} from "../lib/constants";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import CardsCollection from "../CardsCollection";
+import { COLORS, FONTS, BREAKPOINTS} from "@lib/constants";
+import FadeInWhenVisible from "@components/motion/FadeInWhenVisible";
 
 const ShowcaseWrapper = styled.div`
   background-color: #ededed;

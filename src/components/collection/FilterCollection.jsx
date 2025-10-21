@@ -1,8 +1,9 @@
 import { useState } from "react";
-import CardsCollection from "./CardsCollection"
+import CardsCollection from "@components/CardsCollection";
 import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
-import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "@lib/constants";
+import { MdOutlineRadioButtonChecked, MdOutlineRadioButtonUnchecked  } from "react-icons/md";
 
 const FilterContainer = styled.div`
   margin-bottom: 25px;
@@ -126,14 +127,15 @@ function Filter() {
             <FilterLabel>
               Disponibilita'
             </FilterLabel>
-            <FilterCheckbox
+            {/* <FilterCheckbox
               type="checkbox"
               name="stock"
               value="Stock"
               checked={isStockChecked}
               onChange={handleStockCheckbox}
               onClick={handleStockCheckbox}
-            />
+            /> */}
+            {isStockChecked ? <MdOutlineRadioButtonChecked color="white" /> : <MdOutlineRadioButtonUnchecked color="white" /> }
           </FilterBox>
         </FilterWrapper>
       </FilterContainer>

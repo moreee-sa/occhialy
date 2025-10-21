@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar"
 import styled from "styled-components"
 import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
+import Navbar from "@components/Navbar"
 import LoremIpsum from "react-lorem-ipsum";
-import GetPageTitle from "./components/GetPageTitle";
-import FilterCollection from "./components/FilterCollection";
-import Footer from "./components/Footer";
-import { COLORS , FONTS, BREAKPOINTS } from "./lib/constants";
+import GetPageTitle from "@components/GetPageTitle";
+import FilterCollection from "@components/collection/FilterCollection";
+import Footer from "@components/Footer";
+import { COLORS , FONTS, BREAKPOINTS } from "@lib/constants";
 
 const CollectionWrapper = styled.div`
   width: 100%;
@@ -100,8 +100,8 @@ function Collection() {
               <LoremIpsum />
             </SubTagline>
           </SubTaglineWrapper>
-      </TextWrapper>
-      <FilterCollection />
+        </TextWrapper>
+        <FilterCollection />
       </Content>
       <Footer />
     </CollectionWrapper>

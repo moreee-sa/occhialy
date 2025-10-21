@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar"
-import VideoBackground from "./components/VideoBackground";
-import AboutSection from "./components/AboutSection";
-import AboutTagline from "./components/AboutTagline";
+import VideoBackground from "./components/home/VideoBackground";
+import AboutSection from "./components/about/AboutSection";
+import AboutTagline from "./components/about/AboutTagline";
 import styled from "styled-components";
 import GetPageTitle from "./components/GetPageTitle";
 import Footer from "./components/Footer";
-import { COLORS, BREAKPOINTS } from "./lib/constants";
+import { COLORS } from "./lib/constants";
 
 const AboutWrapper = styled.div`
   width: 100%;

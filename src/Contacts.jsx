@@ -1,8 +1,8 @@
-import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import NewsletterSubscription from "./components/NewsletterSubscription";
-import Footer from "./components/Footer";
-import GetPageTitle from "./components/GetPageTitle";
+import Navbar from "@components/Navbar";
+import NewsletterSubscription from "@components/home/NewsletterSubscription";
+import Footer from "@components/Footer";
+import GetPageTitle from "@components/GetPageTitle";
 
 const ContactWrapper = styled.div`
   display: flex;
