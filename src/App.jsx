@@ -1,14 +1,14 @@
 import './App.css';
 import '@fontsource/libre-baskerville';
 import styled from 'styled-components';
-import Navbar from './components/Navbar';
-import Introduction from './components/Introduction';
-import CollectionShowcase from './components/Showcase';
-import NewsletterSubscription from './components/NewsletterSubscription';
-import Footer from './components/Footer';
-import VideoBackground from "./components/VideoBackground";
-import GetPageTitle from './components/GetPageTitle';
-import { COLORS, BREAKPOINTS } from "./lib/constants";
+import Navbar from '@components/Navbar';
+import Introduction from '@components/home/Introduction'
+import CollectionShowcase from '@components/home/Showcase';
+import NewsletterSubscription from '@components/home/NewsletterSubscription';
+import Footer from '@components/Footer';
+import VideoBackground from '@components/home/VideoBackground';
+import GetPageTitle from '@components/GetPageTitle';
+import { COLORS, BREAKPOINTS } from "@lib/constants";
 
 const AppWrapper = styled.div`
   width: 100%;

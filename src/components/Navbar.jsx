@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { FiMenu, FiX } from "react-icons/fi"; // Icone per hamburger menu
+import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "../lib/constants";
+import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "@lib/constants";
 
 const NavbarSticky = styled.div`
   position: sticky;

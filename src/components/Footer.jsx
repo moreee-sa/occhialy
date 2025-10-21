@@ -3,7 +3,7 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS } from "@lib/constants";
 import { FaInstagram, FaXTwitter, FaYoutube, FaTiktok } from "react-icons/fa6";
 
 const FooterWrapper = styled.div`

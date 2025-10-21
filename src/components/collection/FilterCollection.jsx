@@ -1,8 +1,8 @@
 import { useState } from "react";
-import CardsCollection from "./CardsCollection"
+import CardsCollection from "@components/CardsCollection";
 import styled, { keyframes } from "styled-components"
 import "@fontsource/noto-sans/500.css";
-import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
+import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "@lib/constants";
 
 const FilterContainer = styled.div`
   margin-bottom: 25px;

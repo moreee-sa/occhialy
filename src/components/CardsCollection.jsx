@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import '@fontsource/libre-baskerville';
-import occhiali from "../data/occhiali.json";
-import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "../lib/constants";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import occhiali from "@data/occhiali.json";
+import { BREAKPOINTS, COLORS, FONTS, RADIUS } from "@lib/constants";
+import FadeInWhenVisible from "@components/motion/FadeInWhenVisible";
 
 const GridContainer = styled.div`
   display: grid;

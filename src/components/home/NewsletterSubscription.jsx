@@ -4,8 +4,8 @@ import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
-import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "../lib/constants";
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import { COLORS, FONTS, RADIUS, BREAKPOINTS } from "@lib/constants";
+import FadeInWhenVisible from "@components/motion/FadeInWhenVisible";
 
 const NewsletterWrapper = styled.div`
   height: 40vh;

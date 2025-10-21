@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import "@fontsource/noto-sans/500.css";
 import "@fontsource/noto-sans/600.css";
 import '@fontsource/libre-baskerville';
-import { BREAKPOINTS, COLORS, FONTS } from "../lib/constants";
-import BlurText from './BlurText';
+import { BREAKPOINTS, COLORS, FONTS } from '@lib/constants';
+import BlurText from '@components/motion/BlurText';
 
 const TextWrapperHeight = styled.div`
   height: 80vh;

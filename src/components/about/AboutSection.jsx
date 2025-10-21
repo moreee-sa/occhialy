@@ -2,7 +2,7 @@ import styled from "styled-components"
 import '@fontsource/libre-baskerville';
 import "@fontsource/noto-sans/500.css";
 import { LoremIpsum } from 'react-lorem-ipsum';
-import { BREAKPOINTS , COLORS, FONTS, RADIUS } from "../lib/constants";
+import { BREAKPOINTS , COLORS, FONTS, RADIUS } from "@lib/constants";
 
 const AboutSectionWrapper = styled.div`
   position: relative;
