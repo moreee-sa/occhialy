@@ -16,26 +16,26 @@
     "@fontsource/libre-baskerville": "^5.2.10",
     "@fontsource/noto-sans": "^5.2.10",
     "gh-pages": "^6.3.0",
-    "motion": "^12.23.25",
+    "motion": "^12.25.0",
     "prop-types": "^15.8.1",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
     "react-lorem-ipsum": "^1.4.10",
-    "react-router": "^7.10.1",
-    "react-router-dom": "^7.10.1",
-    "styled-components": "^6.1.19"
+    "react-router": "^7.12.0",
+    "react-router-dom": "^7.12.0",
+    "styled-components": "^6.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/react": "^19.2.7",
+    "@eslint/js": "^9.39.2",
+    "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "vite": "^7.2.6"
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^17.0.0",
+    "vite": "^7.3.1"
   }
 }
